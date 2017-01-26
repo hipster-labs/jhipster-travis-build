@@ -15,9 +15,12 @@ cache:
         - $HOME/.yarn-cache
 env:
     global:
+        - PROFILE=dev
+        - RUN_APP=1
+        - PROTRACTOR=0
         - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/travis
         - JHIPSTER_INSTALL=$JHIPSTER_TRAVIS/install
-        - JHIPSTER_SAMPLES=$TRAVIS_BUILD_DIR/app
+        - JHIPSTER_SAMPLES=$JHIPSTER_TRAVIS/samples
         - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
     matrix:
         - JHIPSTER=app-default-from-scratch PROFILE=prod RUN_APP=0
