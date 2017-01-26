@@ -1,0 +1,14 @@
+os:
+  - linux
+services:
+  - docker
+language: node_js
+node_js:
+  - "6.9.4"
+jdk:
+  - oraclejdk8
+install:
+  - docker version
+  - docker-compose version
+script:
+  - echo "HELLO WORLD"
