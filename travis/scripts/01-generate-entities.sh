@@ -13,7 +13,7 @@ moveEntity() {
 #-------------------------------------------------------------------------------
 rm -Rf "$HOME"/app
 mkdir -p "$HOME"/app/.jhipster/
-if [ "$JHIPSTER" == "app-mongodb" ]; then
+if [[ ("$JHIPSTER" == "app-mongodb") || ("$JHIPSTER" == "app-gradle-mongodb") ]]; then
     moveEntity MongoBankAccount
 
     moveEntity FieldTestEntity
@@ -24,7 +24,7 @@ if [ "$JHIPSTER" == "app-mongodb" ]; then
     moveEntity FieldTestPagerEntity
     moveEntity FieldTestPaginationEntity
 
-elif [ "$JHIPSTER" == "app-cassandra" ]; then
+elif [[ "$JHIPSTER" == "app-cassandra" || ("$JHIPSTER" == "app-gradle-cassandra") ]]; then
     moveEntity CassBankAccount
 
     moveEntity CassTestEntity
