@@ -11,3 +11,4 @@ Additionnal builds for generator-jhipster repository
 [travis-url]: https://travis-ci.org/hipster-labs/jhipster-travis-build/branches
 [travis-image-master]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=master
 [travis-image-gradle]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=gradle
+[travis-image-docker]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=docker
