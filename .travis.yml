@@ -45,7 +45,7 @@ env:
   #   - JHIPSTER=app-microservice-consul
 
 before_install:
-  - if [[ $JHIPSTER == "" ]]; then; exit 0; fi;
+  - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
   - export TZ=Australia/Canberra
   - date
   - sudo /etc/init.d/mysql stop
