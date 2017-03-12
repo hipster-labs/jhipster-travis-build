@@ -1,10 +1,10 @@
 {
   "generator-jhipster": {
-    "baseName": "travisNg2",
+    "applicationType": "monolith",
+    "baseName": "travisOauth2",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "serverPort": "8080",
-    "authenticationType": "session",
+    "authenticationType": "oauth2",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
     "websocket": false,
@@ -12,23 +12,22 @@
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "messageBroker": false,
-    "buildTool": "maven",
-    "enableSocialSignIn": false,
-    "rememberMeKey": "448f9a67a8a292c4905a733ec22cc3b78e493c56",
     "useSass": false,
-    "applicationType": "monolith",
-    "testFrameworks": [
-      "gatling",
-      "protractor"
-    ],
-    "jhiPrefix": "custom",
+    "buildTool": "maven",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
-      "en"
+      "en",
+      "fr"
     ],
+    "enableSocialSignIn": false,
+    "testFrameworks": [
+      "gatling"
+    ],
+    "serverPort": "8080",
+    "jhiPrefix": "jhi",
     "travis": true,
+    "messageBroker": false,
     "serviceDiscoveryType": false,
     "clientPackageManager": "yarn",
     "clientFramework": "angular2"

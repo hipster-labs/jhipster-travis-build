@@ -10,7 +10,6 @@ export JHIPSTER_BRANCH=master
 #-------------------------------------------------------------------------------
 # Install JHipster
 #-------------------------------------------------------------------------------
-
 git clone $JHIPSTER_REPO generator-jhipster
 cd generator-jhipster
 if [ "$JHIPSTER_BRANCH" == "latest" ]; then

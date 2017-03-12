@@ -5,15 +5,20 @@
 #-------------------------------------------------------------------------------
 moveEntity() {
     local entity="$1"
-    mv "$JHIPSTER_SAMPLES"/.jhipster/"$entity".json "$HOME"/app/.jhipster/
+    cp "$JHIPSTER_SAMPLES"/.jhipster/"$entity".json "$HOME"/app/.jhipster/
 }
 
 #-------------------------------------------------------------------------------
 # Copy entities json
 #-------------------------------------------------------------------------------
-rm -Rf "$HOME"/app
-mkdir -p "$HOME"/app/.jhipster/
-if [[ ("$JHIPSTER" == "app-mongodb") || ("$JHIPSTER" == "app-gradle-mongodb") ]]; then
+if ["$APP_FOLDER" == "$HOME/app"]; then
+    rm -Rf "$APP_FOLDER"
+else
+    rm -Rf "$APP_FOLDER"/.jhipster/
+fi
+mkdir -p "$APP_FOLDER"/.jhipster/
+
+if [[ ("$JHIPSTER" == "app-ng2-mongodb") || ("$JHIPSTER" == "app-mongodb") || ("$JHIPSTER" == "app-gradle-mongodb") ]]; then
     moveEntity MongoBankAccount
 
     moveEntity FieldTestEntity
@@ -24,7 +29,7 @@ if [[ ("$JHIPSTER" == "app-mongodb") || ("$JHIPSTER" == "app-gradle-mongodb") ]]
     moveEntity FieldTestPagerEntity
     moveEntity FieldTestPaginationEntity
 
-elif [[ "$JHIPSTER" == "app-cassandra" || ("$JHIPSTER" == "app-gradle-cassandra") ]]; then
+elif [[ ("$JHIPSTER" == "app-ng2-cassandra") || "$JHIPSTER" == "app-cassandra" || ("$JHIPSTER" == "app-gradle-cassandra") ]]; then
     moveEntity CassBankAccount
 
     moveEntity CassTestEntity
@@ -45,7 +50,7 @@ elif [[ ("$JHIPSTER" == "app-microservice-eureka") || ("$JHIPSTER" == "app-micro
     moveEntity FieldTestPagerEntity
     moveEntity FieldTestPaginationEntity
 
-elif [[ ("$JHIPSTER" == "app-mysql") || ("$JHIPSTER" == "app-psql-es-noi18n") ]]; then
+elif [[ ("$JHIPSTER" == "app-mysql") || ("$JHIPSTER" == "app-ng2-psql-es-noi18n") || ("$JHIPSTER" == "app-psql-es-noi18n") ]]; then
     moveEntity BankAccount
     moveEntity Label
     moveEntity Operation
@@ -83,7 +88,7 @@ elif [[ ("$JHIPSTER" == "app-mysql") || ("$JHIPSTER" == "app-psql-es-noi18n") ]]
     moveEntity EntityWithServiceImplAndPagination
     moveEntity EntityWithServiceImplPaginationAndDTO
 
-elif [ "$JHIPSTER" == "app-gateway-uaa" ]; then
+elif [[ ("$JHIPSTER" == "app-ng2-gateway-uaa") || ("$JHIPSTER" == "app-gateway-uaa") ]]; then
     moveEntity FieldTestEntity
     moveEntity FieldTestMapstructEntity
     moveEntity FieldTestServiceClassEntity
@@ -118,4 +123,4 @@ else
     moveEntity EntityWithServiceImplPaginationAndDTO
 fi
 
-ls -l "$HOME"/app/.jhipster/
+ls -l "$APP_FOLDER"/.jhipster/
