@@ -43,6 +43,10 @@ env:
   #   - JHIPSTER=app-jwt
   #   - JHIPSTER=app-microservice-eureka
   #   - JHIPSTER=app-microservice-consul
+  #   - JHIPSTER=app-gradle PROTRACTOR=1
+  #   - JHIPSTER=app-gradle-mongodb
+  #   - JHIPSTER=app-gradle-cassandra
+  #   - JHIPSTER=app-gradle-gateway-eureka
 
 before_install:
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
