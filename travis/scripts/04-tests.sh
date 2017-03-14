@@ -1,8 +1,10 @@
 #!/bin/bash
+set -e
 
 #-------------------------------------------------------------------------------
 # Check Javadoc generation
 #-------------------------------------------------------------------------------
+cd "$APP_FOLDER"
 if [ -f "mvnw" ]; then
     ./mvnw javadoc:javadoc
 elif [ -f "gradlew" ]; then
@@ -13,7 +15,7 @@ fi
 # Launch UAA tests
 #-------------------------------------------------------------------------------
 if [ "$JHIPSTER" == "app-gateway-uaa" ]; then
-    cd "$HOME"/uaa
+    cd "$UAA_APP_FOLDER"
     ./mvnw test
 fi
 

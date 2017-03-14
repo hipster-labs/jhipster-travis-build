@@ -78,8 +78,8 @@ fi
 # Run the application
 #-------------------------------------------------------------------------------
 if [ "$RUN_APP" == 1 ]; then
-    if [ "$JHIPSTER" == "app-gateway-uaa" ]; then
-        cd "$HOME"/uaa
+    if [[ "$JHIPSTER" == "app-ng2-gateway-uaa" || "$JHIPSTER" == "app-gateway-uaa" ]]; then
+        cd "$UAA_APP_FOLDER"
         java -jar target/*.war \
             --spring.profiles.active="$PROFILE" \
             --logging.level.io.github.jhipster.sample=ERROR \

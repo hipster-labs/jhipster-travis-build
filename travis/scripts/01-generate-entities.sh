@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 #-------------------------------------------------------------------------------
 # Functions
@@ -11,11 +12,8 @@ moveEntity() {
 #-------------------------------------------------------------------------------
 # Copy entities json
 #-------------------------------------------------------------------------------
-if ["$APP_FOLDER" == "$HOME/app"]; then
-    rm -Rf "$APP_FOLDER"
-else
-    rm -Rf "$APP_FOLDER"/.jhipster/
-fi
+
+rm -Rf "$APP_FOLDER"
 mkdir -p "$APP_FOLDER"/.jhipster/
 
 if [[ ("$JHIPSTER" == "app-ng2-mongodb") || ("$JHIPSTER" == "app-mongodb") || ("$JHIPSTER" == "app-gradle-mongodb") ]]; then
