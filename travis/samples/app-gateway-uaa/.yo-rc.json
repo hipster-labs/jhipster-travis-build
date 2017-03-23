@@ -20,7 +20,8 @@
     "useSass": false,
     "applicationType": "gateway",
     "testFrameworks": [
-      "gatling"
+      "gatling",
+      "protractor"
     ],
     "jhiPrefix": "jhi",
     "enableTranslation": true,

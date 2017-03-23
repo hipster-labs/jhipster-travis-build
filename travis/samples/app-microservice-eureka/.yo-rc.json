@@ -21,7 +21,8 @@
       "fr"
     ],
     "testFrameworks": [
-      "gatling"
+      "gatling",
+      "protractor"
     ],
     "skipClient": true,
     "skipUserManagement": true,

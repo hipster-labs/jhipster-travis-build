@@ -18,7 +18,7 @@ env:
   global:
     - PROFILE=dev
     - RUN_APP=1
-    - PROTRACTOR=0
+    - PROTRACTOR=1
     - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/travis
     - JHIPSTER_INSTALL=$JHIPSTER_TRAVIS/install
     - JHIPSTER_SAMPLES=$JHIPSTER_TRAVIS/samples
@@ -28,23 +28,30 @@ env:
     # environment properties
     - SPRING_OUTPUT_ANSI_ENABLED=ALWAYS
     - SPRING_JPA_SHOW_SQL=false
+  # ----- ng1 applications -----
   # matrix:
   #   - JHIPSTER=app-default-from-scratch PROFILE=prod RUN_APP=0
-  #   - JHIPSTER=app-mysql PROFILE=prod PROTRACTOR=1
-  #   - JHIPSTER=app-psql-es-noi18n PROFILE=prod PROTRACTOR=1
-  #   - JHIPSTER=app-social-websocket PROTRACTOR=1
+  #   - JHIPSTER=app-mysql PROFILE=prod
+  #   - JHIPSTER=app-psql-es-noi18n PROFILE=prod
+  #   - JHIPSTER=app-social-websocket
   #   - JHIPSTER=app-hazelcast-cucumber
   #   - JHIPSTER=app-mariadb-kafka
-  #   - JHIPSTER=app-gateway-eureka
-  #   - JHIPSTER=app-gateway-consul
-  #   - JHIPSTER=app-gateway-uaa
   #   - JHIPSTER=app-cassandra
   #   - JHIPSTER=app-mongodb
   #   - JHIPSTER=app-oauth2
   #   - JHIPSTER=app-jwt
-  #   - JHIPSTER=app-microservice-eureka
-  #   - JHIPSTER=app-microservice-consul
-  #   - JHIPSTER=app-gradle PROTRACTOR=1
+  #
+  # ----- microservices applications -----
+  # matrix:
+  #   - JHIPSTER=app-gateway-eureka
+  #   - JHIPSTER=app-gateway-consul
+  #   - JHIPSTER=app-gateway-uaa
+  #   - JHIPSTER=app-microservice-eureka PROTRACTOR=0
+  #   - JHIPSTER=app-microservice-consul PROTRACTOR=0
+  #
+  # ----- gradle applications -----
+  # matrix:
+  #   - JHIPSTER=app-gradle
   #   - JHIPSTER=app-gradle-mongodb
   #   - JHIPSTER=app-gradle-cassandra
   #   - JHIPSTER=app-gradle-gateway-eureka
