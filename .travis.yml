@@ -73,16 +73,16 @@ env:
   #   - JHIPSTER=gradle-ngx-infinispan
   #
   # ----- microservices applications -----
-  # matrix:
-  #   - JHIPSTER=ms-ngx-gateway-eureka
-  #   - JHIPSTER=ms-ngx-gateway-consul
-  #   - JHIPSTER=ms-ngx-gateway-uaa
-  #   - JHIPSTER=ms-ng1-gateway-eureka
-  #   - JHIPSTER=ms-ng1-gateway-consul
-  #   - JHIPSTER=ms-ng1-gateway-uaa
-  #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
-  #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
-  #
+  matrix:
+    - JHIPSTER=ms-ngx-gateway-eureka
+    - JHIPSTER=ms-ngx-gateway-consul
+    - JHIPSTER=ms-ngx-gateway-uaa
+    - JHIPSTER=ms-ng1-gateway-eureka
+    - JHIPSTER=ms-ng1-gateway-consul
+    - JHIPSTER=ms-ng1-gateway-uaa
+    - JHIPSTER=ms-micro-eureka PROTRACTOR=0
+    - JHIPSTER=ms-micro-consul PROTRACTOR=0
+  
   # ----- React applications -----
   # matrix:
   #   - JHIPSTER=react-mysql PROFILE=prod
