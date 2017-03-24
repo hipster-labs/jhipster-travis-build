@@ -43,6 +43,9 @@ env:
   #
   # ----- microservices applications -----
   # matrix:
+  #   - JHIPSTER=app-ng2-gateway-eureka
+  #   - JHIPSTER=app-ng2-gateway-consul
+  #   - JHIPSTER=app-ng2-gateway-uaa
   #   - JHIPSTER=app-gateway-eureka
   #   - JHIPSTER=app-gateway-consul
   #   - JHIPSTER=app-gateway-uaa
