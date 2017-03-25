@@ -51,7 +51,7 @@ launchCurlOrProtractor() {
 #-------------------------------------------------------------------------------
 if [[ "$JHIPSTER" == "app-gateway-uaa" || "$JHIPSTER" == "app-ng2-gateway-uaa" ]]; then
     cd "$UAA_APP_FOLDER"
-    ./mvnw package -DskipTests=true -P"$PROFILE"
+    ./mvnw package -DskipTests=true
 fi
 
 #-------------------------------------------------------------------------------
@@ -81,7 +81,6 @@ if [ "$RUN_APP" == 1 ]; then
     if [[ "$JHIPSTER" == "app-ng2-gateway-uaa" || "$JHIPSTER" == "app-gateway-uaa" ]]; then
         cd "$UAA_APP_FOLDER"
         java -jar target/*.war \
-            --spring.profiles.active="$PROFILE" \
             --logging.level.io.github.jhipster.sample=ERROR \
             --logging.level.io.github.jhipster.travis=ERROR &
         sleep 80
