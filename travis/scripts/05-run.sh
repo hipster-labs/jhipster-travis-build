@@ -49,8 +49,8 @@ launchCurlOrProtractor() {
 #-------------------------------------------------------------------------------
 # Package UAA
 #-------------------------------------------------------------------------------
-if [ "$JHIPSTER" == "app-gateway-uaa" ]; then
-    cd "$HOME"/uaa
+if [[ "$JHIPSTER" == "app-gateway-uaa" || "$JHIPSTER" == "app-ng2-gateway-uaa" ]]; then
+    cd "$UAA_APP_FOLDER"
     ./mvnw package -DskipTests=true -P"$PROFILE"
 fi
 
