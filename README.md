@@ -9,6 +9,7 @@ Additionnal builds for generator-jhipster repository
 | Docker        | [![Build Status][travis-image-docker]][travis-url] | Build for testing Docker image |
 | Gradle        | [![Build Status][travis-image-gradle]][travis-url] | Builds for Gradle applications |
 | NG1           | [![Build Status][travis-image-ng1]][travis-url]    | Builds for NG1 applications    |
+| NG2           | [![Build Status][travis-image-ng2]][travis-url]    | Builds for NG2 applications    |
 | Microservices | [![Build Status][travis-image-ms]][travis-url]     | Builds for Microservices       |
 
 ## Analysis of the sample JHipster project
@@ -24,6 +25,7 @@ Additionnal builds for generator-jhipster repository
 [travis-image-docker]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=docker
 [travis-image-gradle]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=gradle
 [travis-image-ng1]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=ng1
+[travis-image-ng2]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=ng2
 [travis-image-ms]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=microservices
 
 [sonar-url]: https://sonarqube.com/dashboard?id=io.github.jhipster.sample%3Ajhipster-sample-application
