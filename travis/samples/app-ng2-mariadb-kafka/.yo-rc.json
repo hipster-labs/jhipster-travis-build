@@ -1,37 +1,37 @@
 {
   "generator-jhipster": {
-    "applicationType": "monolith",
-    "baseName": "jhipsterSampleApplication",
-    "packageName": "io.github.jhipster.sample",
-    "packageFolder": "io/github/jhipster/sample",
+    "baseName": "travisDefault",
+    "packageName": "io.github.jhipster.travis",
+    "packageFolder": "io/github/jhipster/travis",
+    "serverPort": "8080",
     "authenticationType": "session",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
-    "prodDatabaseType": "mysql",
+    "prodDatabaseType": "mariadb",
     "searchEngine": false,
-    "useSass": false,
+    "messageBroker": "kafka",
     "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
+    "useSass": false,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling",
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
       "en",
       "fr"
     ],
-    "enableSocialSignIn": false,
-    "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
-    "testFrameworks": [
-      "gatling",
-      "protractor"
-    ],
-    "serverPort": "8080",
-    "jhiPrefix": "jhi",
     "travis": true,
-    "messageBroker": false,
     "serviceDiscoveryType": false,
     "clientPackageManager": "yarn",
-    "clientFramework": "angular1"
+    "clientFramework": "angular2"
   }
 }
