@@ -66,6 +66,7 @@ env:
   # ----- gradle applications -----
   # matrix:
   #   - JHIPSTER=app-gradle
+  #   - JHIPSTER=app-gradle-mariadb-kafka
   #   - JHIPSTER=app-gradle-mongodb
   #   - JHIPSTER=app-gradle-cassandra
   #   - JHIPSTER=app-gradle-gateway-eureka
