@@ -15,7 +15,7 @@ if [[ "$JHIPSTER" == "app-gateway-uaa" || "$JHIPSTER" == "app-ng2-gateway-uaa" ]
     mv -f "$JHIPSTER_SAMPLES"/uaa/.yo-rc.json "$UAA_APP_FOLDER"/
     cd "$UAA_APP_FOLDER"
     yarn link generator-jhipster
-    yo jhipster --force --no-insight --with-entities --skip-checks
+    jhipster --force --no-insight --with-entities --skip-checks
     ls -al "$UAA_APP_FOLDER"
 fi
 
@@ -23,5 +23,5 @@ mkdir -p "$APP_FOLDER"
 mv -f "$JHIPSTER_SAMPLES"/"$JHIPSTER"/.yo-rc.json "$APP_FOLDER"/
 cd "$APP_FOLDER"
 yarn link generator-jhipster
-yo jhipster --force --no-insight --skip-checks --with-entities
+jhipster --force --no-insight --skip-checks --with-entities
 ls -al "$APP_FOLDER"
