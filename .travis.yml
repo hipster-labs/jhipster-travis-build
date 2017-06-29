@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "6.10.0"
+  - "6.11.0"
 jdk:
   - oraclejdk8
 addons:
@@ -19,7 +19,6 @@ cache:
     - $HOME/.m2
     - $HOME/.gradle
     - $HOME/.yarn-cache
-    - node_modules
 env:
   global:
     - PROFILE=dev
