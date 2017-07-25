@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "6.11.0"
+  - "6.11.1"
 jdk:
   - oraclejdk8
 addons:
@@ -35,47 +35,54 @@ env:
     - SPRING_JPA_SHOW_SQL=false
   # ----- ng1 applications -----
   # matrix:
-  #   - JHIPSTER=app-mysql PROFILE=prod
-  #   - JHIPSTER=app-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=app-social-websocket
-  #   - JHIPSTER=app-hazelcast-cucumber
-  #   - JHIPSTER=app-mariadb-kafka
-  #   - JHIPSTER=app-cassandra
-  #   - JHIPSTER=app-mongodb
-  #   - JHIPSTER=app-oauth2
-  #   - JHIPSTER=app-jwt
+  #   - JHIPSTER=ng1-mysql PROFILE=prod
+  #   - JHIPSTER=ng1-psql-es-noi18n PROFILE=prod
+  #   - JHIPSTER=ng1-social-websocket
+  #   - JHIPSTER=ng1-hazelcast-cucumber
+  #   - JHIPSTER=ng1-mariadb-kafka
+  #   - JHIPSTER=ng1-cassandra
+  #   - JHIPSTER=ng1-mongodb
+  #   - JHIPSTER=ng1-oauth2
+  #   - JHIPSTER=ng1-jwt
+  #   - JHIPSTER=ng1-infinispan
   #
   # ----- ng2 applications -----
   # matrix:
-  #   - JHIPSTER=app-ng2-mysql PROFILE=prod
-  #   - JHIPSTER=app-ng2-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=app-ng2-sass-noi18n
-  #   - JHIPSTER=app-ng2-social-websocket
-  #   - JHIPSTER=app-ng2-mariadb-kafka
-  #   - JHIPSTER=app-ng2-cassandra
-  #   - JHIPSTER=app-ng2-mongodb
-  #   - JHIPSTER=app-ng2-oauth2
-  #   - JHIPSTER=app-ng2-jwt
+  #   - JHIPSTER=ngx-mysql PROFILE=prod
+  #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
+  #   - JHIPSTER=ngx-sass-noi18n
+  #   - JHIPSTER=ngx-social-websocket
+  #   - JHIPSTER=ngx-mariadb-kafka
+  #   - JHIPSTER=ngx-cassandra
+  #   - JHIPSTER=ngx-mongodb
+  #   - JHIPSTER=ngx-oauth2
+  #   - JHIPSTER=ngx-jwt
+  #   - JHIPSTER=ngx-infinispan
   #
   # ----- microservices applications -----
   # matrix:
-  #   - JHIPSTER=app-ng2-gateway-eureka
-  #   - JHIPSTER=app-ng2-gateway-consul
-  #   - JHIPSTER=app-ng2-gateway-uaa
-  #   - JHIPSTER=app-gateway-eureka
-  #   - JHIPSTER=app-gateway-consul
-  #   - JHIPSTER=app-gateway-uaa
-  #   - JHIPSTER=app-microservice-eureka PROTRACTOR=0
-  #   - JHIPSTER=app-microservice-consul PROTRACTOR=0
+  #   - JHIPSTER=ms-ngx-gateway-eureka
+  #   - JHIPSTER=ms-ngx-gateway-consul
+  #   - JHIPSTER=ms-ngx-gateway-uaa
+  #   - JHIPSTER=ms-ng1-gateway-eureka
+  #   - JHIPSTER=ms-ng1-gateway-consul
+  #   - JHIPSTER=ms-ng1-gateway-uaa
+  #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
+  #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
   #
   # ----- gradle applications -----
   # matrix:
-  #   - JHIPSTER=app-gradle
-  #   - JHIPSTER=app-gradle-mariadb-kafka
-  #   - JHIPSTER=app-gradle-mongodb
-  #   - JHIPSTER=app-gradle-cassandra
-  #   - JHIPSTER=app-gradle-gateway-eureka
-
+  #   - JHIPSTER=gradle-ngx-mysql
+  #   - JHIPSTER=gradle-ngx-psql
+  #   - JHIPSTER=gradle-ngx-mariadb-kafka
+  #   - JHIPSTER=gradle-ngx-mongodb
+  #   - JHIPSTER=gradle-ngx-cassandra
+  #   - JHIPSTER=gradle-ngx-gateway-eureka
+  #
+  # ----- React applications -----
+  # matrix:
+  #   - JHIPSTER=app-react
+  #
 before_install:
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
   - export TZ=Australia/Canberra
@@ -97,3 +104,16 @@ script:
   - $JHIPSTER_SCRIPTS/03-docker-compose.sh
   - $JHIPSTER_SCRIPTS/04-tests.sh
   - $JHIPSTER_SCRIPTS/05-run.sh
+
+# ----- Docker build
+# before_install:
+#   - docker version
+# install:
+#   - docker pull jhipster/jhipster:master
+# script:
+#   - docker run --rm -it jhipster/jhipster:master yarn --version
+#   - docker run --rm -it jhipster/jhipster:master yo --version
+#   - docker run --rm -it jhipster/jhipster:master bower --version
+#   - docker run --rm -it jhipster/jhipster:master gulp --version
+#   - docker run --rm -it jhipster/jhipster:master jhipster --help --no-insight
+#   - docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
