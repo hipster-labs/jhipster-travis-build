@@ -1,36 +1,35 @@
 {
   "generator-jhipster": {
-    "applicationType": "monolith",
-    "baseName": "travisCassandra",
+    "baseName": "travisNg2Jwt",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "jwt",
-    "hibernateCache": "no",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
     "websocket": false,
-    "databaseType": "cassandra",
-    "devDatabaseType": "cassandra",
-    "prodDatabaseType": "cassandra",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
     "searchEngine": false,
-    "useSass": false,
+    "messageBroker": false,
     "buildTool": "gradle",
-    "enableTranslation": true,
-    "nativeLanguage": "en",
-    "languages": [
-      "en",
-      "fr"
-    ],
     "enableSocialSignIn": false,
-    "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
+    "useSass": false,
+    "applicationType": "monolith",
     "testFrameworks": [
       "gatling",
       "protractor"
     ],
-    "serverPort": "8080",
     "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
     "travis": true,
-    "messageBroker": false,
     "serviceDiscoveryType": false,
+    "jwtSecretKey": "82c6dce0d969c5bc3ab2530ecc5c18baaef1c987",
     "clientPackageManager": "yarn",
     "clientFramework": "angularX"
   }

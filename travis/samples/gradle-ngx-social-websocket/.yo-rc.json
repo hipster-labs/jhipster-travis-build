@@ -1,18 +1,17 @@
 {
   "generator-jhipster": {
-    "applicationType": "gateway",
-    "baseName": "travisDefault",
+    "applicationType": "monolith",
+    "baseName": "travisSocialWebsocket",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
     "authenticationType": "jwt",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
-    "websocket": false,
+    "websocket": "spring-websocket",
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "serviceDiscoveryType": "eureka",
     "useSass": false,
     "buildTool": "gradle",
     "enableTranslation": true,
@@ -21,7 +20,8 @@
       "en",
       "fr"
     ],
-    "enableSocialSignIn": false,
+    "enableSocialSignIn": true,
+    "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
     "testFrameworks": [
       "gatling",
       "protractor"
@@ -30,7 +30,7 @@
     "jhiPrefix": "jhi",
     "travis": true,
     "messageBroker": false,
-    "jwtSecretKey": "6acb91d39cc4584bd713bfa5e037d694efb6a1a2",
+    "serviceDiscoveryType": false,
     "clientPackageManager": "yarn",
     "clientFramework": "angularX"
   }
