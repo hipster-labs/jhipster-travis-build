@@ -4,7 +4,7 @@
     "baseName": "travisMongo",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "session",
+    "authenticationType": "jwt",
     "hibernateCache": "no",
     "clusteredHttpSession": false,
     "websocket": false,

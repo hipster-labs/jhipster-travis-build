@@ -4,7 +4,7 @@
     "baseName": "travisHazelcastCucumber",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "session",
+    "authenticationType": "jwt",
     "hibernateCache": "hazelcast",
     "clusteredHttpSession": "hazelcast",
     "websocket": false,

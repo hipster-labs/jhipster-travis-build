@@ -4,7 +4,7 @@
     "baseName": "travisJwt",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "jwt",
+    "authenticationType": "session",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
     "websocket": false,
