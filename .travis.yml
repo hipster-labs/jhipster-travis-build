@@ -60,18 +60,18 @@ env:
   #   - JHIPSTER=ngx-infinispan
   #
   # ----- gradle applications -----
-  # matrix:
-  #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
-  #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=gradle-ngx-sass-noi18n
-  #   - JHIPSTER=gradle-ngx-social-websocket
-  #   - JHIPSTER=gradle-ngx-mariadb-kafka
-  #   - JHIPSTER=gradle-ngx-cassandra
-  #   - JHIPSTER=gradle-ngx-mongodb
-  #   - JHIPSTER=gradle-ngx-oauth2
-  #   - JHIPSTER=gradle-ngx-session
-  #   - JHIPSTER=gradle-ngx-infinispan
-  #
+  matrix:
+    - JHIPSTER=gradle-ngx-mysql PROFILE=prod
+    - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
+    - JHIPSTER=gradle-ngx-sass-noi18n
+    - JHIPSTER=gradle-ngx-social-websocket
+    - JHIPSTER=gradle-ngx-mariadb-kafka
+    - JHIPSTER=gradle-ngx-cassandra
+    - JHIPSTER=gradle-ngx-mongodb
+    - JHIPSTER=gradle-ngx-oauth2
+    - JHIPSTER=gradle-ngx-session
+    - JHIPSTER=gradle-ngx-infinispan
+
   # ----- microservices applications -----
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
