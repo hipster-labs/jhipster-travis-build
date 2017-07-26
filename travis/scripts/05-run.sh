@@ -49,7 +49,7 @@ launchCurlOrProtractor() {
 #-------------------------------------------------------------------------------
 # Package UAA
 #-------------------------------------------------------------------------------
-if [[ "$JHIPSTER" == "app-gateway-uaa" || "$JHIPSTER" == "app-ng2-gateway-uaa" ]]; then
+if [[ "$JHIPSTER" == *"uaa"* ]]; then
     cd "$UAA_APP_FOLDER"
     ./mvnw package -DskipTests=true
 fi
@@ -78,7 +78,7 @@ fi
 # Run the application
 #-------------------------------------------------------------------------------
 if [ "$RUN_APP" == 1 ]; then
-    if [[ "$JHIPSTER" == "app-ng2-gateway-uaa" || "$JHIPSTER" == "app-gateway-uaa" ]]; then
+    if [[ "$JHIPSTER" == *"uaa"* ]]; then
         cd "$UAA_APP_FOLDER"
         java -jar target/*.war \
             --logging.level.io.github.jhipster.sample=ERROR \
@@ -93,7 +93,7 @@ if [ "$RUN_APP" == 1 ]; then
         --logging.level.io.github.jhipster.travis=ERROR &
     sleep 40
 
-    if [[ ("$JHIPSTER" != 'app-microservice-eureka') && ("$JHIPSTER" != 'app-microservice-consul') ]]; then
+    if [[ "$JHIPSTER" != *'micro'* ]]; then
         launchCurlOrProtractor
     fi
 fi

@@ -16,7 +16,7 @@ moveEntity() {
 rm -Rf "$APP_FOLDER"
 mkdir -p "$APP_FOLDER"/.jhipster/
 
-if [[ ("$JHIPSTER" == "app-ng2-mongodb") || ("$JHIPSTER" == "app-mongodb") || ("$JHIPSTER" == "app-gradle-mongodb") ]]; then
+if [[ "$JHIPSTER" == *"mongodb"* ]]; then
     moveEntity MongoBankAccount
 
     moveEntity FieldTestEntity
@@ -27,7 +27,7 @@ if [[ ("$JHIPSTER" == "app-ng2-mongodb") || ("$JHIPSTER" == "app-mongodb") || ("
     moveEntity FieldTestPagerEntity
     moveEntity FieldTestPaginationEntity
 
-elif [[ ("$JHIPSTER" == "app-ng2-cassandra") || "$JHIPSTER" == "app-cassandra" || ("$JHIPSTER" == "app-gradle-cassandra") ]]; then
+elif [[ ("$JHIPSTER" == *"cassandra"* ]]; then
     moveEntity CassBankAccount
 
     moveEntity CassTestEntity
@@ -35,7 +35,7 @@ elif [[ ("$JHIPSTER" == "app-ng2-cassandra") || "$JHIPSTER" == "app-cassandra" |
     moveEntity CassTestServiceClassEntity
     moveEntity CassTestServiceImplEntity
 
-elif [[ ("$JHIPSTER" == "app-microservice-eureka") || ("$JHIPSTER" == "app-microservice-consul") ]]; then
+elif [[ "$JHIPSTER" == *"micro"* ]]; then
     moveEntity MicroserviceBankAccount
     moveEntity MicroserviceOperation
     moveEntity MicroserviceLabel
@@ -48,7 +48,7 @@ elif [[ ("$JHIPSTER" == "app-microservice-eureka") || ("$JHIPSTER" == "app-micro
     moveEntity FieldTestPagerEntity
     moveEntity FieldTestPaginationEntity
 
-elif [[ ("$JHIPSTER" == "app-mysql") || ("$JHIPSTER" == "app-ng2-psql-es-noi18n") || ("$JHIPSTER" == "app-psql-es-noi18n") ]]; then
+elif [[ ( "$JHIPSTER" == *"mysql"* ) || ( "$JHIPSTER" == *"psql"* ) ]]; then
     moveEntity BankAccount
     moveEntity Label
     moveEntity Operation
@@ -86,7 +86,7 @@ elif [[ ("$JHIPSTER" == "app-mysql") || ("$JHIPSTER" == "app-ng2-psql-es-noi18n"
     moveEntity EntityWithServiceImplAndPagination
     moveEntity EntityWithServiceImplPaginationAndDTO
 
-elif [[ ("$JHIPSTER" == "app-ng2-gateway-uaa") || ("$JHIPSTER" == "app-gateway-uaa") ]]; then
+elif [[ "$JHIPSTER" == *"uaa"* ]]; then
     moveEntity FieldTestEntity
     moveEntity FieldTestMapstructEntity
     moveEntity FieldTestServiceClassEntity
