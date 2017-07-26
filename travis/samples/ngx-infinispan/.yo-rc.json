@@ -4,7 +4,7 @@
     "baseName": "travisInfinispan",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "session",
+    "authenticationType": "jwt",
     "hibernateCache": "infinispan",
     "clusteredHttpSession": false,
     "websocket": false,

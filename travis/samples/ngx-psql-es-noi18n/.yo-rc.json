@@ -2,9 +2,9 @@
   "generator-jhipster": {
     "applicationType": "monolith",
     "baseName": "travisPsqlEsNoi18n",
-    "packageName": "com.mycompany.myapp",
-    "packageFolder": "com/mycompany/myapp",
-    "authenticationType": "session",
+    "packageName": "io.github.jhipster.travis",
+    "packageFolder": "io/github/jhipster/travis",
+    "authenticationType": "jwt",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": false,
     "websocket": false,

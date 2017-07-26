@@ -56,7 +56,7 @@ env:
   #   - JHIPSTER=ngx-cassandra
   #   - JHIPSTER=ngx-mongodb
   #   - JHIPSTER=ngx-oauth2
-  #   - JHIPSTER=ngx-jwt
+  #   - JHIPSTER=ngx-session
   #   - JHIPSTER=ngx-infinispan
   #
   # ----- microservices applications -----
