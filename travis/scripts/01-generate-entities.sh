@@ -27,7 +27,7 @@ if [[ "$JHIPSTER" == *"mongodb"* ]]; then
     moveEntity FieldTestPagerEntity
     moveEntity FieldTestPaginationEntity
 
-elif [[ ("$JHIPSTER" == *"cassandra"* ]]; then
+elif [[ "$JHIPSTER" == *"cassandra"* ]]; then
     moveEntity CassBankAccount
 
     moveEntity CassTestEntity
