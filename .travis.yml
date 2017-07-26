@@ -96,37 +96,37 @@ env:
   #   - JHIPSTER=react-session
   #   - JHIPSTER=react-infinispan
   #
-before_install:
-  - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
-  - export TZ=Australia/Canberra
-  - date
-  - sudo /etc/init.d/mysql stop
-  - sudo /etc/init.d/postgresql stop
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  # Install with Yarn
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.27.5
-  - export PATH=$HOME/.yarn/bin:$PATH
-  - yarn global add yo bower gulp-cli
-install:
-  - $JHIPSTER_INSTALL/01-install-jhipster-stack.sh
-  - $JHIPSTER_INSTALL/02-checkVersion.sh
-  - $JHIPSTER_SCRIPTS/01-generate-entities.sh
-  - $JHIPSTER_SCRIPTS/02-generate-project.sh
-script:
-  - $JHIPSTER_SCRIPTS/03-docker-compose.sh
-  - $JHIPSTER_SCRIPTS/04-tests.sh
-  - $JHIPSTER_SCRIPTS/05-run.sh
+# before_install:
+#   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
+#   - export TZ=Australia/Canberra
+#   - date
+#   - sudo /etc/init.d/mysql stop
+#   - sudo /etc/init.d/postgresql stop
+#   - export DISPLAY=:99.0
+#   - sh -e /etc/init.d/xvfb start
+#   # Install with Yarn
+#   - curl -o- -L https://yarnpkg.com/install.sh | bash
+#   - export PATH=$HOME/.yarn/bin:$PATH
+#   - yarn global add yo bower gulp-cli
+# install:
+#   - $JHIPSTER_INSTALL/01-install-jhipster-stack.sh
+#   - $JHIPSTER_INSTALL/02-checkVersion.sh
+#   - $JHIPSTER_SCRIPTS/01-generate-entities.sh
+#   - $JHIPSTER_SCRIPTS/02-generate-project.sh
+# script:
+#   - $JHIPSTER_SCRIPTS/03-docker-compose.sh
+#   - $JHIPSTER_SCRIPTS/04-tests.sh
+#   - $JHIPSTER_SCRIPTS/05-run.sh
 
 # ----- Docker build
-# before_install:
-#   - docker version
-# install:
-#   - docker pull jhipster/jhipster:master
-# script:
-#   - docker run --rm -it jhipster/jhipster:master yarn --version
-#   - docker run --rm -it jhipster/jhipster:master yo --version
-#   - docker run --rm -it jhipster/jhipster:master bower --version
-#   - docker run --rm -it jhipster/jhipster:master gulp --version
-#   - docker run --rm -it jhipster/jhipster:master jhipster --help --no-insight
-#   - docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
+before_install:
+  - docker version
+install:
+  - docker pull jhipster/jhipster:master
+script:
+  - docker run --rm -it jhipster/jhipster:master yarn --version
+  - docker run --rm -it jhipster/jhipster:master yo --version
+  - docker run --rm -it jhipster/jhipster:master bower --version
+  - docker run --rm -it jhipster/jhipster:master gulp --version
+  - docker run --rm -it jhipster/jhipster:master jhipster --help --no-insight
+  - docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
