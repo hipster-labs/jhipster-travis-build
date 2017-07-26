@@ -47,18 +47,18 @@ env:
   #   - JHIPSTER=ng1-infinispan
   #
   # ----- ngx applications -----
-  # matrix:
-  #   - JHIPSTER=ngx-mysql PROFILE=prod
-  #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=ngx-sass-noi18n
-  #   - JHIPSTER=ngx-social-websocket
-  #   - JHIPSTER=ngx-mariadb-kafka
-  #   - JHIPSTER=ngx-cassandra
-  #   - JHIPSTER=ngx-mongodb
-  #   - JHIPSTER=ngx-oauth2
-  #   - JHIPSTER=ngx-session
-  #   - JHIPSTER=ngx-infinispan
-  #
+  matrix:
+    - JHIPSTER=ngx-mysql PROFILE=prod
+    - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
+    - JHIPSTER=ngx-sass-noi18n
+    - JHIPSTER=ngx-social-websocket
+    - JHIPSTER=ngx-mariadb-kafka
+    - JHIPSTER=ngx-cassandra
+    - JHIPSTER=ngx-mongodb
+    - JHIPSTER=ngx-oauth2
+    - JHIPSTER=ngx-session
+    - JHIPSTER=ngx-infinispan
+
   # ----- gradle applications -----
   # matrix:
   #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
