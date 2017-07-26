@@ -46,7 +46,7 @@ env:
   #   - JHIPSTER=ng1-session
   #   - JHIPSTER=ng1-infinispan
   #
-  # ----- ng2 applications -----
+  # ----- ngx applications -----
   # matrix:
   #   - JHIPSTER=ngx-mysql PROFILE=prod
   #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
@@ -59,6 +59,19 @@ env:
   #   - JHIPSTER=ngx-session
   #   - JHIPSTER=ngx-infinispan
   #
+  # ----- gradle applications -----
+  # matrix:
+  #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
+  #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
+  #   - JHIPSTER=gradle-ngx-sass-noi18n
+  #   - JHIPSTER=gradle-ngx-social-websocket
+  #   - JHIPSTER=gradle-ngx-mariadb-kafka
+  #   - JHIPSTER=gradle-ngx-cassandra
+  #   - JHIPSTER=gradle-ngx-mongodb
+  #   - JHIPSTER=gradle-ngx-oauth2
+  #   - JHIPSTER=gradle-ngx-session
+  #   - JHIPSTER=gradle-ngx-infinispan
+  #
   # ----- microservices applications -----
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
@@ -69,15 +82,6 @@ env:
   #   - JHIPSTER=ms-ng1-gateway-uaa
   #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
   #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
-  #
-  # ----- gradle applications -----
-  # matrix:
-  #   - JHIPSTER=gradle-ngx-mysql
-  #   - JHIPSTER=gradle-ngx-psql
-  #   - JHIPSTER=gradle-ngx-mariadb-kafka
-  #   - JHIPSTER=gradle-ngx-mongodb
-  #   - JHIPSTER=gradle-ngx-cassandra
-  #   - JHIPSTER=gradle-ngx-gateway-eureka
   #
   # ----- React applications -----
   # matrix:
