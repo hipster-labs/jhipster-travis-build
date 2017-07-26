@@ -85,7 +85,16 @@ env:
   #
   # ----- React applications -----
   # matrix:
-  #   - JHIPSTER=app-react
+  #   - JHIPSTER=react-mysql PROFILE=prod
+  #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod
+  #   - JHIPSTER=react-sass-noi18n
+  #   - JHIPSTER=react-social-websocket
+  #   - JHIPSTER=react-mariadb-kafka
+  #   - JHIPSTER=react-cassandra
+  #   - JHIPSTER=react-mongodb
+  #   - JHIPSTER=react-oauth2
+  #   - JHIPSTER=react-session
+  #   - JHIPSTER=react-infinispan
   #
 before_install:
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
