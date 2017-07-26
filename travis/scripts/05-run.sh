@@ -80,17 +80,13 @@ fi
 if [ "$RUN_APP" == 1 ]; then
     if [[ "$JHIPSTER" == *"uaa"* ]]; then
         cd "$UAA_APP_FOLDER"
-        java -jar target/*.war \
-            --logging.level.io.github.jhipster.sample=ERROR \
-            --logging.level.io.github.jhipster.travis=ERROR &
+        java -jar target/*.war &
         sleep 80
     fi
 
     cd "$APP_FOLDER"
     java -jar app.war \
-        --spring.profiles.active="$PROFILE" \
-        --logging.level.io.github.jhipster.sample=ERROR \
-        --logging.level.io.github.jhipster.travis=ERROR &
+        --spring.profiles.active="$PROFILE" &
     sleep 40
 
     if [[ "$JHIPSTER" != *'micro'* ]]; then
