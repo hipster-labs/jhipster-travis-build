@@ -58,38 +58,41 @@ fi
 # Package the application
 #-------------------------------------------------------------------------------
 cd "$APP_FOLDER"
+./mvnw &
+sleep 60
+curl http://localhost:8080
 
-if [ -f "mvnw" ]; then
-    ./mvnw package -DskipTests=true -P"$PROFILE"
-    mv target/*.war app.war
-elif [ -f "gradlew" ]; then
-    ./gradlew bootRepackage -P"$PROFILE" -x test
-    mv build/libs/*.war app.war
-else
-    echo "No mvnw or gradlew"
-    exit 0
-fi
-if [ $? -ne 0 ]; then
-    echo "Error when packaging"
-    exit 1
-fi
+# if [ -f "mvnw" ]; then
+#     ./mvnw package -DskipTests=true -P"$PROFILE"
+#     mv target/*.war app.war
+# elif [ -f "gradlew" ]; then
+#     ./gradlew bootRepackage -P"$PROFILE" -x test
+#     mv build/libs/*.war app.war
+# else
+#     echo "No mvnw or gradlew"
+#     exit 0
+# fi
+# if [ $? -ne 0 ]; then
+#     echo "Error when packaging"
+#     exit 1
+# fi
 
 #-------------------------------------------------------------------------------
 # Run the application
 #-------------------------------------------------------------------------------
-if [ "$RUN_APP" == 1 ]; then
-    if [[ "$JHIPSTER" == *"uaa"* ]]; then
-        cd "$UAA_APP_FOLDER"
-        java -jar target/*.war &
-        sleep 80
-    fi
-
-    cd "$APP_FOLDER"
-    java -jar app.war \
-        --spring.profiles.active="$PROFILE" &
-    sleep 40
-
-    if [[ "$JHIPSTER" != *'micro'* ]]; then
-        launchCurlOrProtractor
-    fi
-fi
+# if [ "$RUN_APP" == 1 ]; then
+#     if [[ "$JHIPSTER" == *"uaa"* ]]; then
+#         cd "$UAA_APP_FOLDER"
+#         java -jar target/*.war &
+#         sleep 80
+#     fi
+#
+#     cd "$APP_FOLDER"
+#     java -jar app.war \
+#         --spring.profiles.active="$PROFILE" &
+#     sleep 40
+#
+#     if [[ "$JHIPSTER" != *'micro'* ]]; then
+#         launchCurlOrProtractor
+#     fi
+# fi

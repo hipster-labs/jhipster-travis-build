@@ -84,7 +84,8 @@ env:
   #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
   #
   # ----- React applications -----
-  # matrix:
+  matrix:
+    - JHIPSTER=react-default PROFILE=dev PROTRACTOR=0
   #   - JHIPSTER=react-mysql PROFILE=prod
   #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=react-sass-noi18n
@@ -111,11 +112,11 @@ before_install:
 install:
   - $JHIPSTER_INSTALL/01-install-jhipster-stack.sh
   - $JHIPSTER_INSTALL/02-checkVersion.sh
-  - $JHIPSTER_SCRIPTS/01-generate-entities.sh
+  # - $JHIPSTER_SCRIPTS/01-generate-entities.sh
   - $JHIPSTER_SCRIPTS/02-generate-project.sh
 script:
-  - $JHIPSTER_SCRIPTS/03-docker-compose.sh
-  - $JHIPSTER_SCRIPTS/04-tests.sh
+  # - $JHIPSTER_SCRIPTS/03-docker-compose.sh
+  # - $JHIPSTER_SCRIPTS/04-tests.sh
   - $JHIPSTER_SCRIPTS/05-run.sh
 
 # ----- Docker build

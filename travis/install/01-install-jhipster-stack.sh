@@ -5,7 +5,7 @@ set -ev
 # Choose the repo
 #-------------------------------------------------------------------------------
 export JHIPSTER_REPO=https://github.com/jhipster/generator-jhipster.git
-export JHIPSTER_BRANCH=master
+export JHIPSTER_BRANCH=jh-react
 
 #-------------------------------------------------------------------------------
 # Install JHipster

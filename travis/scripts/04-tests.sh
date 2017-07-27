@@ -33,8 +33,8 @@ elif [ -f "gradlew" ]; then
         -Dlogging.level.io.github.jhipster.travis=ERROR
 fi
 if [ -f "gulpfile.js" ]; then
-    gulp test --no-notification
+    # gulp test --no-notification
 fi
 if [ -f "tsconfig.json" ]; then
-    yarn run test
+    # yarn run test
 fi
