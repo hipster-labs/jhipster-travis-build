@@ -55,6 +55,7 @@ env:
   #   - JHIPSTER=ngx-oauth2
   #   - JHIPSTER=ngx-session
   #   - JHIPSTER=ngx-infinispan
+  #   - JHIPSTER=ngx-couchbase
   #
   # ----- gradle applications -----
   matrix:
@@ -68,6 +69,7 @@ env:
     - JHIPSTER=gradle-ngx-oauth2
     - JHIPSTER=gradle-ngx-session
     - JHIPSTER=gradle-ngx-infinispan
+    - JHIPSTER=gradle-ngx-couchbase
 
   # ----- microservices applications -----
   # matrix:
@@ -92,6 +94,7 @@ env:
   #   - JHIPSTER=react-oauth2
   #   - JHIPSTER=react-session
   #   - JHIPSTER=react-infinispan
+  #   - JHIPSTER=react-couchbase
   #
 before_install:
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
