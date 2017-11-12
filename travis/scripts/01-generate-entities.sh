@@ -16,8 +16,8 @@ moveEntity() {
 rm -Rf "$APP_FOLDER"
 mkdir -p "$APP_FOLDER"/.jhipster/
 
-if [[ "$JHIPSTER" == *"mongodb"* ]]; then
-    moveEntity MongoBankAccount
+if [[ ("$JHIPSTER" == *"mongodb"*) || ("$JHIPSTER" == *"couchbase"*) ]]; then
+    moveEntity DocumentBankAccount
 
     moveEntity FieldTestEntity
     moveEntity FieldTestMapstructEntity

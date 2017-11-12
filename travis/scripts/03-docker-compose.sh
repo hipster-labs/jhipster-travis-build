@@ -17,6 +17,9 @@ fi
 if [ -a src/main/docker/mongodb.yml ]; then
     docker-compose -f src/main/docker/mongodb.yml up -d
 fi
+if [ -a src/main/docker/couchbase.yml ]; then
+    docker-compose -f src/main/docker/couchbase.yml up -d
+fi
 if [ -a src/main/docker/mysql.yml ]; then
     docker-compose -f src/main/docker/mysql.yml up -d
 fi
@@ -31,6 +34,9 @@ if [ -a src/main/docker/mariadb.yml ]; then
 fi
 if [ -a src/main/docker/kafka.yml ]; then
     docker-compose -f src/main/docker/kafka.yml up -d
+fi
+if [ -a src/main/docker/keycloak.yml ]; then
+    docker-compose -f src/main/docker/keycloak.yml up -d
 fi
 
 docker ps -a
