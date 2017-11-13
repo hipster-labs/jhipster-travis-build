@@ -4,6 +4,7 @@
 # Specific for couchbase
 #-------------------------------------------------------------------------------
 if [ -a src/main/docker/couchbase.yml ]; then
+    cd "$APP_FOLDER"
     docker-compose -f src/main/docker/couchbase.yml up -d
     sleep 10
 fi
