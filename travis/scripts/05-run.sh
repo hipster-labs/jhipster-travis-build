@@ -1,6 +1,15 @@
 #!/bin/bash
 
 #-------------------------------------------------------------------------------
+# Specific for couchbase
+#-------------------------------------------------------------------------------
+cd "$APP_FOLDER"
+if [ -a src/main/docker/couchbase.yml ]; then
+    docker-compose -f src/main/docker/couchbase.yml up -d
+    sleep 10
+fi
+
+#-------------------------------------------------------------------------------
 # Functions
 #-------------------------------------------------------------------------------
 launchCurlOrProtractor() {
@@ -28,7 +37,7 @@ launchCurlOrProtractor() {
     fi
 
     retryCount=0
-    maxRetry=2
+    maxRetry=1
     until [ "$retryCount" -ge "$maxRetry" ]
     do
         result=0
@@ -51,7 +60,7 @@ launchCurlOrProtractor() {
 #-------------------------------------------------------------------------------
 if [[ "$JHIPSTER" == *"uaa"* ]]; then
     cd "$UAA_APP_FOLDER"
-    ./mvnw package -DskipTests=true
+    ./mvnw package -DskipTests
 fi
 
 #-------------------------------------------------------------------------------
@@ -60,7 +69,7 @@ fi
 cd "$APP_FOLDER"
 
 if [ -f "mvnw" ]; then
-    ./mvnw package -DskipTests=true -P"$PROFILE"
+    ./mvnw package -DskipTests -P"$PROFILE"
     mv target/*.war app.war
 elif [ -f "gradlew" ]; then
     ./gradlew bootRepackage -P"$PROFILE" -x test
