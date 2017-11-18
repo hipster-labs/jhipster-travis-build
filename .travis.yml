@@ -48,7 +48,7 @@ env:
     - JHIPSTER=ngx-mysql PROFILE=prod
     - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
     - JHIPSTER=ngx-sass-noi18n
-    - JHIPSTER=ngx-social-websocket
+    - JHIPSTER=ngx-social-websocket PROFILE=prod
     - JHIPSTER=ngx-mariadb-kafka
     - JHIPSTER=ngx-cassandra
     - JHIPSTER=ngx-mongodb
