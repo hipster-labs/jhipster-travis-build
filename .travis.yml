@@ -48,7 +48,7 @@ env:
     - JHIPSTER=ngx-mysql PROFILE=prod
     - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
     - JHIPSTER=ngx-sass-noi18n
-    - JHIPSTER=ngx-social-websocket PROFILE=prod
+    - JHIPSTER=ngx-social-websocket PROTRACTOR=0
     - JHIPSTER=ngx-mariadb-kafka
     - JHIPSTER=ngx-cassandra
     - JHIPSTER=ngx-mongodb
@@ -62,7 +62,7 @@ env:
   #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
   #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=gradle-ngx-sass-noi18n
-  #   - JHIPSTER=gradle-ngx-social-websocket
+  #   - JHIPSTER=gradle-ngx-social-websocket PROTRACTOR=0
   #   - JHIPSTER=gradle-ngx-mariadb-kafka
   #   - JHIPSTER=gradle-ngx-cassandra
   #   - JHIPSTER=gradle-ngx-mongodb
