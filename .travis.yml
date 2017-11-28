@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "6.11.3"
+  - "8.9.1"
 jdk:
   - oraclejdk8
 addons:
@@ -40,7 +40,6 @@ env:
   #   - JHIPSTER=ng1-mariadb-kafka
   #   - JHIPSTER=ng1-cassandra
   #   - JHIPSTER=ng1-mongodb
-  #   - JHIPSTER=ng1-oauth2
   #   - JHIPSTER=ng1-session
   #   - JHIPSTER=ng1-infinispan
   #
@@ -49,35 +48,37 @@ env:
   #   - JHIPSTER=ngx-mysql PROFILE=prod
   #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=ngx-sass-noi18n
-  #   - JHIPSTER=ngx-social-websocket
+  #   - JHIPSTER=ngx-social-websocket PROTRACTOR=0
   #   - JHIPSTER=ngx-mariadb-kafka
   #   - JHIPSTER=ngx-cassandra
   #   - JHIPSTER=ngx-mongodb
   #   - JHIPSTER=ngx-oauth2
   #   - JHIPSTER=ngx-session
   #   - JHIPSTER=ngx-infinispan
+  #   - JHIPSTER=ngx-couchbase
   #
   # ----- gradle applications -----
   # matrix:
   #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
   #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=gradle-ngx-sass-noi18n
-  #   - JHIPSTER=gradle-ngx-social-websocket
+  #   - JHIPSTER=gradle-ngx-social-websocket PROTRACTOR=0
   #   - JHIPSTER=gradle-ngx-mariadb-kafka
   #   - JHIPSTER=gradle-ngx-cassandra
   #   - JHIPSTER=gradle-ngx-mongodb
   #   - JHIPSTER=gradle-ngx-oauth2
   #   - JHIPSTER=gradle-ngx-session
   #   - JHIPSTER=gradle-ngx-infinispan
+  #   - JHIPSTER=gradle-ngx-couchbase
   #
   # ----- microservices applications -----
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
   #   - JHIPSTER=ms-ngx-gateway-consul
-  #   - JHIPSTER=ms-ngx-gateway-uaa
+  #   - JHIPSTER=ms-ngx-gateway-uaa PROTRACTOR=0
   #   - JHIPSTER=ms-ng1-gateway-eureka
   #   - JHIPSTER=ms-ng1-gateway-consul
-  #   - JHIPSTER=ms-ng1-gateway-uaa
+  #   - JHIPSTER=ms-ng1-gateway-uaa PROTRACTOR=0
   #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
   #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
   #
@@ -94,6 +95,7 @@ env:
   #   - JHIPSTER=react-oauth2
   #   - JHIPSTER=react-session
   #   - JHIPSTER=react-infinispan
+  #   - JHIPSTER=react-couchbase
   #
 before_install:
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;

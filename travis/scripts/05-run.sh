@@ -1,6 +1,15 @@
 #!/bin/bash
 
 #-------------------------------------------------------------------------------
+# Specific for couchbase
+#-------------------------------------------------------------------------------
+cd "$APP_FOLDER"
+if [ -a src/main/docker/couchbase.yml ]; then
+    docker-compose -f src/main/docker/couchbase.yml up -d
+    sleep 10
+fi
+
+#-------------------------------------------------------------------------------
 # Functions
 #-------------------------------------------------------------------------------
 launchCurlOrProtractor() {
@@ -28,7 +37,7 @@ launchCurlOrProtractor() {
     fi
 
     retryCount=0
-    maxRetry=2
+    maxRetry=1
     until [ "$retryCount" -ge "$maxRetry" ]
     do
         result=0
@@ -51,7 +60,7 @@ launchCurlOrProtractor() {
 #-------------------------------------------------------------------------------
 if [[ "$JHIPSTER" == *"uaa"* ]]; then
     cd "$UAA_APP_FOLDER"
-    ./mvnw package -DskipTests=true
+    ./mvnw package -DskipTests
 fi
 
 #-------------------------------------------------------------------------------
