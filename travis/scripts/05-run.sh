@@ -16,6 +16,9 @@ launchCurlOrProtractor() {
     retryCount=1
     maxRetry=10
     httpUrl="http://localhost:8080"
+    if [[ "$JHIPSTER" != *'micro'* ]]; then
+        httpUrl="http://localhost:8081/management/health"
+    fi
 
     rep=$(curl -v "$httpUrl")
     status=$?
@@ -98,7 +101,5 @@ if [ "$RUN_APP" == 1 ]; then
         --spring.profiles.active="$PROFILE" &
     sleep 40
 
-    if [[ "$JHIPSTER" != *'micro'* ]]; then
-        launchCurlOrProtractor
-    fi
+    launchCurlOrProtractor
 fi
