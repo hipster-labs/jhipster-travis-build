@@ -68,7 +68,7 @@ fi
 #-------------------------------------------------------------------------------
 cd "$APP_FOLDER"
 ./mvnw &
-sleep 60
+sleep 80
 curl http://localhost:8080
 
 # if [ -f "mvnw" ]; then
