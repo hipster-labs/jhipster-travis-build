@@ -16,7 +16,7 @@ launchCurlOrProtractor() {
     retryCount=1
     maxRetry=10
     httpUrl="http://localhost:8080"
-    if [[ "$JHIPSTER" != *'micro'* ]]; then
+    if [[ "$JHIPSTER" == *'micro'* ]]; then
         httpUrl="http://localhost:8081/management/health"
     fi
 
