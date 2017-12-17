@@ -99,7 +99,9 @@ if [ "$RUN_APP" == 1 ]; then
     cd "$APP_FOLDER"
     java -jar app.war \
         --spring.profiles.active="$PROFILE" &
+    echo $! > .pid
     sleep 40
 
     launchCurlOrProtractor
+    kill $(cat .pid)
 fi
