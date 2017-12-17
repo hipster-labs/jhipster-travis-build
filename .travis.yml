@@ -111,7 +111,7 @@ before_install:
 install:
   - $JHIPSTER_INSTALL/01-install-jhipster-stack.sh
   - $JHIPSTER_INSTALL/02-checkVersion.sh
-  - if [ "$JHIPSTER" == "" ]; then
+  - if [[ "$JHIPSTER" == "" ]]; then
         yarn test;
     fi
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
