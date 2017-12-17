@@ -97,7 +97,6 @@ env:
   #   - JHIPSTER=react-couchbase
   #
 before_install:
-  - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
   - export TZ=Australia/Canberra
   - date
   - sudo /etc/init.d/mysql stop
@@ -112,6 +111,10 @@ before_install:
 install:
   - $JHIPSTER_INSTALL/01-install-jhipster-stack.sh
   - $JHIPSTER_INSTALL/02-checkVersion.sh
+  - if [ "$JHIPSTER" == "" ]; then
+        yarn test;
+    fi
+  - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
   - $JHIPSTER_SCRIPTS/01-generate-entities.sh
   - $JHIPSTER_SCRIPTS/02-generate-project.sh
 script:
