@@ -37,9 +37,10 @@ env:
   #   - JHIPSTER=ng1-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=ng1-social-websocket
   #   - JHIPSTER=ng1-hazelcast-cucumber
-  #   - JHIPSTER=ng1-mariadb-kafka
+  #   - JHIPSTER=ng1-mariadb-kafka-nol2
   #   - JHIPSTER=ng1-cassandra
   #   - JHIPSTER=ng1-mongodb
+  #   - JHIPSTER=ng1-oauth2
   #   - JHIPSTER=ng1-session
   #   - JHIPSTER=ng1-infinispan
   #
