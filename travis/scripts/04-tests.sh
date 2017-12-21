@@ -2,9 +2,18 @@
 set -e
 
 #-------------------------------------------------------------------------------
-# Check Javadoc generation
+# Display environment information like JDK version
 #-------------------------------------------------------------------------------
 cd "$APP_FOLDER"
+if [ -f "mvnw" ]; then
+    ./mvnw enforcer:display-info
+elif [ -f "gradlew" ]; then
+    ./gradlew -v
+fi
+
+#-------------------------------------------------------------------------------
+# Check Javadoc generation
+#-------------------------------------------------------------------------------
 if [ -f "mvnw" ]; then
     ./mvnw javadoc:javadoc
 elif [ -f "gradlew" ]; then
@@ -36,5 +45,5 @@ if [ -f "gulpfile.js" ]; then
     gulp test --no-notification
 fi
 if [ -f "tsconfig.json" ]; then
-    yarn run test
+    yarn test
 fi
