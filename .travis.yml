@@ -64,6 +64,7 @@ env:
   #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=gradle-ngx-sass-noi18n
   #   - JHIPSTER=gradle-ngx-social-websocket PROTRACTOR=0
+  #   - JHIPSTER=gradle-ngx-hazelcast-cucumber
   #   - JHIPSTER=gradle-ngx-mariadb-kafka-nol2
   #   - JHIPSTER=gradle-ngx-cassandra
   #   - JHIPSTER=gradle-ngx-mongodb
