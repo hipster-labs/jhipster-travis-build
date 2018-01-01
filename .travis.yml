@@ -22,8 +22,7 @@ env:
     - PROFILE=dev
     - RUN_APP=1
     - PROTRACTOR=1
-    - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/travis
-    - JHIPSTER_INSTALL=$JHIPSTER_TRAVIS/install
+    - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/generator-jhipster/travis
     - JHIPSTER_SAMPLES=$JHIPSTER_TRAVIS/samples
     - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
     - APP_FOLDER=$HOME/app
@@ -64,6 +63,7 @@ env:
   #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=gradle-ngx-sass-noi18n
   #   - JHIPSTER=gradle-ngx-social-websocket PROTRACTOR=0
+  #   - JHIPSTER=gradle-ngx-hazelcast-cucumber
   #   - JHIPSTER=gradle-ngx-mariadb-kafka-nol2
   #   - JHIPSTER=gradle-ngx-cassandra
   #   - JHIPSTER=gradle-ngx-mongodb
@@ -110,13 +110,17 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
   - yarn global add yo bower gulp-cli
 install:
-  - $JHIPSTER_INSTALL/01-install-jhipster-stack.sh
-  - $JHIPSTER_INSTALL/02-checkVersion.sh
+  # install generator-jhipster from clone
+  - travis/install-jhipster.sh
   - if [[ "$JHIPSTER" == "" ]]; then
-        cd "$TRAVIS_BUILD_DIR"/generator-jhipster;
-        yarn test;
+      cd "$TRAVIS_BUILD_DIR"/generator-jhipster;
+      yarn test;
     fi
+  # copy samples
+  - cp -R "$TRAVIS_BUILD_DIR"/travis/samples/* "$JHIPSTER_SAMPLES"/
+  - ls -al "$JHIPSTER_SAMPLES"/
   - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
+  # generate project and entities
   - $JHIPSTER_SCRIPTS/01-generate-entities.sh
   - $JHIPSTER_SCRIPTS/02-generate-project.sh
 script:
