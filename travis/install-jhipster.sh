@@ -10,6 +10,7 @@ export JHIPSTER_BRANCH=master
 #-------------------------------------------------------------------------------
 # Install JHipster
 #-------------------------------------------------------------------------------
+cd $TRAVIS_BUILD_DIR
 git clone $JHIPSTER_REPO generator-jhipster
 cd generator-jhipster
 if [ "$JHIPSTER_BRANCH" == "latest" ]; then
