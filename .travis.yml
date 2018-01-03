@@ -21,7 +21,7 @@ env:
   global:
     - PROFILE=dev
     - RUN_APP=1
-    - PROTRACTOR=1
+    - PROTRACTOR=0
     - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/generator-jhipster/travis
     - JHIPSTER_SAMPLES=$JHIPSTER_TRAVIS/samples
     - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
