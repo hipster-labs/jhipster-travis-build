@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "8.9.3"
+  - "8.9.4"
 jdk:
   - oraclejdk8
 addons:
@@ -19,9 +19,21 @@ cache:
     - $HOME/.gradle
 env:
   global:
+    # configuration
     - PROFILE=dev
     - RUN_APP=1
-    - PROTRACTOR=1
+    - PROTRACTOR=0
+    - JHIPSTER_REPO=https://github.com/jhipster/generator-jhipster.git
+    - JHIPSTER_BRANCH=master
+    # if the JHIPSTER_DEPENDENCIES_BRANCH value is release,
+    # it won't clone the project but use the release from Maven
+    - JHIPSTER_DEPENDENCIES_REPO=https://github.com/jhipster/jhipster-dependencies.git
+    - JHIPSTER_DEPENDENCIES_BRANCH=release
+    # if the JHIPSTER_LIB_BRANCH value is release,
+    # it won't clone the project but use the release from Maven
+    - JHIPSTER_LIB_REPO=https://github.com/jhipster/jhipster.git
+    - JHIPSTER_LIB_BRANCH=release
+    # properties for scripts sh
     - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/generator-jhipster/travis
     - JHIPSTER_SAMPLES=$JHIPSTER_TRAVIS/samples
     - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
