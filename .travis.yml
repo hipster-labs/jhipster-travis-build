@@ -22,7 +22,7 @@ env:
     # configuration
     - PROFILE=dev
     - RUN_APP=1
-    - PROTRACTOR=0
+    - PROTRACTOR=1
     - JHIPSTER_REPO=https://github.com/jhipster/generator-jhipster.git
     - JHIPSTER_BRANCH=master
     # if the JHIPSTER_DEPENDENCIES_BRANCH value is release,
