@@ -142,7 +142,7 @@ before_install:
   - yarn -v
   - yarn global add yo bower gulp-cli
 install:
-  - "$TRAVIS_BUILD_DIR"/travis/script/00-install-jhipster.sh
+  - "$TRAVIS_BUILD_DIR"/travis/scripts/00-install-jhipster.sh
   # copy samples
   - cp -R "$TRAVIS_BUILD_DIR"/travis/samples/* "$JHIPSTER_SAMPLES"/
   - ls -al "$JHIPSTER_SAMPLES"/
