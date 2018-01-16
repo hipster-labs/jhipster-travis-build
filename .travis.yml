@@ -19,22 +19,10 @@ cache:
     - $HOME/.gradle
 env:
   global:
-    # configuration
     - PROFILE=dev
     - RUN_APP=1
-    - PROTRACTOR=0
-    - JHIPSTER_REPO=https://github.com/jhipster/generator-jhipster.git
-    - JHIPSTER_BRANCH=master
-    # if the JHIPSTER_DEPENDENCIES_BRANCH value is release,
-    # it won't clone the project but use the release from Maven
-    - JHIPSTER_DEPENDENCIES_REPO=https://github.com/jhipster/jhipster-dependencies.git
-    - JHIPSTER_DEPENDENCIES_BRANCH=release
-    # if the JHIPSTER_LIB_BRANCH value is release,
-    # it won't clone the project but use the release from Maven
-    - JHIPSTER_LIB_REPO=https://github.com/jhipster/jhipster.git
-    - JHIPSTER_LIB_BRANCH=release
-    # properties for scripts sh
-    - JHIPSTER_TRAVIS=$TRAVIS_BUILD_DIR/generator-jhipster/travis
+    - PROTRACTOR=1
+    - JHIPSTER_TRAVIS=$HOME/generator-jhipster/travis
     - JHIPSTER_SAMPLES=$JHIPSTER_TRAVIS/samples
     - JHIPSTER_SCRIPTS=$JHIPSTER_TRAVIS/scripts
     - APP_FOLDER=$HOME/app
@@ -42,6 +30,35 @@ env:
     # environment properties
     - SPRING_OUTPUT_ANSI_ENABLED=ALWAYS
     - SPRING_JPA_SHOW_SQL=false
+
+    # if JHIPSTER_DEPENDENCIES_BRANCH value is release, use the release from Maven
+    - JHIPSTER_DEPENDENCIES_REPO=https://github.com/jhipster/jhipster-dependencies.git
+    - JHIPSTER_DEPENDENCIES_BRANCH=release
+    # if JHIPSTER_LIB_BRANCH value is release, use the release from Maven
+    - JHIPSTER_LIB_REPO=https://github.com/jhipster/jhipster.git
+    - JHIPSTER_LIB_BRANCH=release
+    # if JHIPSTER_BRANCH value is release, use the release from NPM
+    - JHIPSTER_REPO=https://github.com/jhipster/generator-jhipster.git
+    - JHIPSTER_BRANCH=master
+
+  # ----- default applications -----
+  # matrix:
+  #   - JHIPSTER=ngx-default PROFILE=prod PROTRACTOR=1
+  #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod PROTRACTOR=1
+  #   - JHIPSTER=ngx-gradle-fr PROFILE=prod PROTRACTOR=1
+  #   - JHIPSTER=ngx-mariadb-oauth2-sass-infinispan PROTRACTOR=1
+  #   - JHIPSTER=ngx-h2mem-social-ws-nol2
+  #   - JHIPSTER=ngx-mongodb-kafka-cucumber
+  #   - JHIPSTER=ngx-session-cassandra-fr
+  #   - JHIPSTER=ngx-couchbase
+  #   - JHIPSTER=ms-ngx-gateway-eureka
+  #   - JHIPSTER=ms-ngx-gateway-consul
+  #   - JHIPSTER=ms-ngx-gateway-uaa
+  #   - JHIPSTER=ms-micro-eureka
+  #   - JHIPSTER=ms-micro-consul
+  #   - JHIPSTER=react-default
+  #   - JHIPSTER=ng1-default
+  #
   # ----- ng1 applications -----
   # matrix:
   #   - JHIPSTER=ng1-mysql PROFILE=prod
@@ -112,9 +129,39 @@ env:
 
 # ----- Docker build
 before_install:
+<<<<<<< HEAD
   - docker version
 install:
   - docker pull jhipster/jhipster:master
+=======
+  - jdk_switcher use oraclejdk8
+  - java -version
+  - export TZ=Australia/Canberra
+  - date
+  - sudo /etc/init.d/mysql stop
+  - sudo /etc/init.d/postgresql stop
+  # Use this for Protractor
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  # Install with Yarn
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s
+  - export PATH=$HOME/.yarn/bin:$PATH
+  - yarn -v
+  - yarn global add yo bower gulp-cli
+install:
+  - $TRAVIS_BUILD_DIR/travis/scripts/00-install-jhipster.sh
+  - if [[ "$JHIPSTER" == "" ]]; then
+      cd "$HOME"/generator-jhipster;
+      yarn test;
+    fi
+  # copy samples
+  - cp -R "$TRAVIS_BUILD_DIR"/travis/samples/* "$JHIPSTER_SAMPLES"/
+  - ls -al "$JHIPSTER_SAMPLES"/
+  - if [[ $JHIPSTER == "" ]]; then exit 0; fi;
+  # generate project and entities
+  - $JHIPSTER_SCRIPTS/01-generate-entities.sh
+  - $JHIPSTER_SCRIPTS/02-generate-project.sh
+>>>>>>> master
 script:
   - docker run --rm -it jhipster/jhipster:master yarn --version
   - docker run --rm -it jhipster/jhipster:master yo --version
