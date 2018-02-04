@@ -57,19 +57,6 @@ env:
   #   - JHIPSTER=ms-micro-eureka
   #   - JHIPSTER=ms-micro-consul
   #   - JHIPSTER=react-default
-  #   - JHIPSTER=ng1-default
-  #
-  # ----- ng1 applications -----
-  # matrix:
-  #   - JHIPSTER=ng1-mysql PROFILE=prod
-  #   - JHIPSTER=ng1-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=ng1-social-websocket
-  #   - JHIPSTER=ng1-hazelcast-cucumber
-  #   - JHIPSTER=ng1-mariadb-kafka-nol2
-  #   - JHIPSTER=ng1-cassandra
-  #   - JHIPSTER=ng1-mongodb
-  #   - JHIPSTER=ng1-session
-  #   - JHIPSTER=ng1-infinispan
   #
   # ----- ngx applications -----
   # matrix:
@@ -106,9 +93,6 @@ env:
   #   - JHIPSTER=ms-ngx-gateway-eureka
   #   - JHIPSTER=ms-ngx-gateway-consul
   #   - JHIPSTER=ms-ngx-gateway-uaa PROTRACTOR=0
-  #   - JHIPSTER=ms-ng1-gateway-eureka
-  #   - JHIPSTER=ms-ng1-gateway-consul
-  #   - JHIPSTER=ms-ng1-gateway-uaa PROTRACTOR=0
   #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
   #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
   #
