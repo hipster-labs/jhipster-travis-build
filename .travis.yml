@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "8.9.4"
+  - "8.10.0"
 jdk:
   - oraclejdk8
 addons:
@@ -110,6 +110,10 @@ env:
   #   - JHIPSTER=react-infinispan
   #   - JHIPSTER=react-couchbase
   #
+  # ----- Docker applications -----
+  # matrix:
+  #   - JHIPSTER=ngx-default PROFILE=prod PROTRACTOR=1
+  #
 before_install:
   - jdk_switcher use oraclejdk8
   - java -version
@@ -149,9 +153,4 @@ script:
 # install:
 #   - docker pull jhipster/jhipster:master
 # script:
-#   - docker run --rm -it jhipster/jhipster:master yarn --version
-#   - docker run --rm -it jhipster/jhipster:master yo --version
-#   - docker run --rm -it jhipster/jhipster:master bower --version
-#   - docker run --rm -it jhipster/jhipster:master gulp --version
-#   - docker run --rm -it jhipster/jhipster:master jhipster --help --no-insight
-#   - docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
+#   - $TRAVIS_BUILD_DIR/travis/scripts/04-tests-docker.sh
