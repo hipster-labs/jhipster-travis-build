@@ -112,7 +112,7 @@ env:
   #
   # ----- Docker applications -----
   # matrix:
-  #   - JHIPSTER=ngx-default PROFILE=prod PROTRACTOR=1
+  #   - JHIPSTER=ngx-mysql PROFILE=prod PROTRACTOR=1
   #
 before_install:
   - jdk_switcher use oraclejdk8
