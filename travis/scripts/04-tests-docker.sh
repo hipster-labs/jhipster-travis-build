@@ -20,6 +20,7 @@ cd "$APP_FOLDER"
 ls -al $HOME
 ls -al $APP_FOLDER
 
+docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app/ jhipster/jhipster:master ls -al
 docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app/ \
     jhipster/jhipster:master jhipster --force --no-insight --skip-checks --with-entities
 ls -al "$APP_FOLDER"
