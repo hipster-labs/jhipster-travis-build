@@ -17,8 +17,10 @@ docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
 mkdir -p "$APP_FOLDER"
 cp -f "$JHIPSTER_SAMPLES"/"$JHIPSTER"/.yo-rc.json "$APP_FOLDER"/
 cd "$APP_FOLDER"
+ls -al $HOME
+ls -al $APP_FOLDER
 
-docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app \
+docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app/ \
     jhipster/jhipster:master jhipster --force --no-insight --skip-checks --with-entities
 ls -al "$APP_FOLDER"
 
