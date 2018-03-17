@@ -4,23 +4,16 @@ set -e
 #-------------------------------------------------------------------------------
 # Test Docker image
 #-------------------------------------------------------------------------------
-docker run --rm -it jhipster/jhipster:master yarn --version
-docker run --rm -it jhipster/jhipster:master yo --version
-docker run --rm -it jhipster/jhipster:master bower --version
-docker run --rm -it jhipster/jhipster:master gulp --version
-docker run --rm -it jhipster/jhipster:master jhipster --help --no-insight
-docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
-
-#-------------------------------------------------------------------------------
-# Generate the project with Docker image
-#-------------------------------------------------------------------------------
-mkdir -p "$APP_FOLDER"
-cp -f "$JHIPSTER_SAMPLES"/"$JHIPSTER"/.yo-rc.json "$APP_FOLDER"/
-cd "$APP_FOLDER"
-
-docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app \
-    jhipster/jhipster:master jhipster --force --no-insight --skip-checks --with-entities
-ls -al "$APP_FOLDER"
-
-docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app ./mvnw test
-docker run --rm -it -v "$APP_FOLDER":/home/jhipster/app yarn test
+docker container run -d --name jhipster jhipster/jhipster:master
+docker container ps
+docker container exec -it jhipster yarn --version
+docker container exec -it jhipster yo --version
+docker container exec -it jhipster bower --version
+docker container exec -it jhipster gulp --version
+docker container exec -it jhipster jhipster --help --no-insight
+docker container exec -it jhipster jhipster info --no-insight
+docker container exec -it jhipster curl https://raw.githubusercontent.com/jhipster/generator-jhipster/master/travis/samples/ngx-default/.yo-rc.json -o .yo-rc.json
+docker container exec -it jhipster ls -al
+docker container exec -it jhipster jhipster --force --no-insight --skip-checks --with-entities
+docker container exec -it jhipster ./mvnw test
+docker container exec -it jhipster yarn test
