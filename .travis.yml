@@ -89,6 +89,7 @@ env:
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
   #   - JHIPSTER=ms-ngx-gateway-eureka-oauth2
+  #   - JHIPSTER=ms-ngx-gateway-eureka-oauth2-nodb
   #   - JHIPSTER=ms-ngx-gateway-consul
   #   - JHIPSTER=ms-ngx-gateway-uaa PROTRACTOR=0
   #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
