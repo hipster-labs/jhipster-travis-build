@@ -1,11 +1,10 @@
 {
   "generator-jhipster": {
+    "applicationType": "gateway",
     "baseName": "travisDefault",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "serverPort": "8080",
-    "authenticationType": "uaa",
-    "uaaBaseName": "travisUaa",
+    "authenticationType": "oauth2",
     "cacheProvider": "hazelcast",
     "enableHibernateCache": true,
     "websocket": false,
@@ -13,24 +12,25 @@
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "messageBroker": false,
     "serviceDiscoveryType": "eureka",
-    "buildTool": "maven",
-    "enableSocialSignIn": false,
     "useSass": false,
-    "applicationType": "gateway",
+    "buildTool": "maven",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "fr"
+    ],
     "testFrameworks": [
       "gatling",
       "protractor"
     ],
+    "serverPort": "8080",
     "jhiPrefix": "jhi",
-    "enableTranslation": true,
-    "nativeLanguage": "en",
-    "languages": [
-      "en"
-    ],
     "travis": true,
+    "messageBroker": false,
+    "jwtSecretKey": "6acb91d39cc4584bd713bfa5e037d694efb6a1a2",
     "clientPackageManager": "yarn",
-    "clientFramework": "angular1"
+    "clientFramework": "angularX"
   }
 }

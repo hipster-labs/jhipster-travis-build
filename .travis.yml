@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "8.9.4"
+  - "8.10.0"
 jdk:
   - oraclejdk8
 addons:
@@ -31,9 +31,6 @@ env:
     - SPRING_OUTPUT_ANSI_ENABLED=ALWAYS
     - SPRING_JPA_SHOW_SQL=false
 
-    # if JHIPSTER_DEPENDENCIES_BRANCH value is release, use the release from Maven
-    - JHIPSTER_DEPENDENCIES_REPO=https://github.com/jhipster/jhipster-dependencies.git
-    - JHIPSTER_DEPENDENCIES_BRANCH=release
     # if JHIPSTER_LIB_BRANCH value is release, use the release from Maven
     - JHIPSTER_LIB_REPO=https://github.com/jhipster/jhipster.git
     - JHIPSTER_LIB_BRANCH=release
@@ -47,7 +44,7 @@ env:
   #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod PROTRACTOR=1
   #   - JHIPSTER=ngx-gradle-fr PROFILE=prod PROTRACTOR=1
   #   - JHIPSTER=ngx-mariadb-oauth2-sass-infinispan PROTRACTOR=1
-  #   - JHIPSTER=ngx-h2mem-social-ws-nol2
+  #   - JHIPSTER=ngx-h2mem-ws-nol2
   #   - JHIPSTER=ngx-mongodb-kafka-cucumber
   #   - JHIPSTER=ngx-session-cassandra-fr
   #   - JHIPSTER=ngx-couchbase
@@ -63,7 +60,7 @@ env:
   #   - JHIPSTER=ngx-mysql PROFILE=prod
   #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=ngx-sass-noi18n
-  #   - JHIPSTER=ngx-social-websocket PROTRACTOR=0
+  #   - JHIPSTER=ngx-websocket PROTRACTOR=0
   #   - JHIPSTER=ngx-hazelcast-cucumber
   #   - JHIPSTER=ngx-mariadb-kafka-nol2
   #   - JHIPSTER=ngx-cassandra
@@ -78,7 +75,7 @@ env:
   #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
   #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=gradle-ngx-sass-noi18n
-  #   - JHIPSTER=gradle-ngx-social-websocket PROTRACTOR=0
+  #   - JHIPSTER=gradle-ngx-websocket PROTRACTOR=0
   #   - JHIPSTER=gradle-ngx-hazelcast-cucumber
   #   - JHIPSTER=gradle-ngx-mariadb-kafka-nol2
   #   - JHIPSTER=gradle-ngx-cassandra
@@ -91,17 +88,19 @@ env:
   # ----- microservices applications -----
   matrix:
     - JHIPSTER=ms-ngx-gateway-eureka
+    - JHIPSTER=ms-ngx-gateway-eureka-oauth2
     - JHIPSTER=ms-ngx-gateway-consul
     - JHIPSTER=ms-ngx-gateway-uaa PROTRACTOR=0
     - JHIPSTER=ms-micro-eureka PROTRACTOR=0
+    - JHIPSTER=ms-micro-eureka-oauth2 PROTRACTOR=0
     - JHIPSTER=ms-micro-consul PROTRACTOR=0
-
+  
   # ----- React applications -----
   # matrix:
   #   - JHIPSTER=react-mysql PROFILE=prod
   #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod
   #   - JHIPSTER=react-sass-noi18n
-  #   - JHIPSTER=react-social-websocket
+  #   - JHIPSTER=react-websocket
   #   - JHIPSTER=react-mariadb-kafka
   #   - JHIPSTER=react-cassandra
   #   - JHIPSTER=react-mongodb
@@ -109,6 +108,10 @@ env:
   #   - JHIPSTER=react-session
   #   - JHIPSTER=react-infinispan
   #   - JHIPSTER=react-couchbase
+  #
+  # ----- Docker applications -----
+  # matrix:
+  #   - JHIPSTER=ngx-mysql PROFILE=prod PROTRACTOR=1
   #
 before_install:
   - jdk_switcher use oraclejdk8
@@ -124,7 +127,6 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s
   - export PATH=$HOME/.yarn/bin:$PATH
   - yarn -v
-  - yarn global add yo bower gulp-cli
 install:
   - $TRAVIS_BUILD_DIR/travis/scripts/00-install-jhipster.sh
   - if [[ "$JHIPSTER" == "" ]]; then
@@ -138,6 +140,7 @@ install:
   # generate project and entities
   - $JHIPSTER_SCRIPTS/01-generate-entities.sh
   - $JHIPSTER_SCRIPTS/02-generate-project.sh
+  - $JHIPSTER_SCRIPTS/03-replace-version-generated-project.sh
 script:
   - $JHIPSTER_SCRIPTS/03-docker-compose.sh
   - $JHIPSTER_SCRIPTS/04-tests.sh
@@ -149,9 +152,4 @@ script:
 # install:
 #   - docker pull jhipster/jhipster:master
 # script:
-#   - docker run --rm -it jhipster/jhipster:master yarn --version
-#   - docker run --rm -it jhipster/jhipster:master yo --version
-#   - docker run --rm -it jhipster/jhipster:master bower --version
-#   - docker run --rm -it jhipster/jhipster:master gulp --version
-#   - docker run --rm -it jhipster/jhipster:master jhipster --help --no-insight
-#   - docker run --rm -it jhipster/jhipster:master jhipster info --no-insight
+#   - $TRAVIS_BUILD_DIR/travis/scripts/04-tests-docker.sh
