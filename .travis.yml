@@ -115,18 +115,18 @@ env:
   # ----- React applications -----
   matrix:
     - JHIPSTER=react-default PROFILE=dev PROTRACTOR=0
-  #   - JHIPSTER=react-mysql PROFILE=prod
-  #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=react-sass-noi18n
-  #   - JHIPSTER=react-social-websocket
-  #   - JHIPSTER=react-mariadb-kafka
-  #   - JHIPSTER=react-cassandra
-  #   - JHIPSTER=react-mongodb
-  #   - JHIPSTER=react-oauth2
-  #   - JHIPSTER=react-session
-  #   - JHIPSTER=react-infinispan
-  #   - JHIPSTER=react-couchbase
-  #
+    - JHIPSTER=react-mysql PROFILE=prod
+    - JHIPSTER=react-psql-es-noi18n PROFILE=prod
+    - JHIPSTER=react-sass-noi18n
+    - JHIPSTER=react-social-websocket
+    - JHIPSTER=react-mariadb-kafka
+    - JHIPSTER=react-cassandra
+    - JHIPSTER=react-mongodb
+    - JHIPSTER=react-oauth2
+    - JHIPSTER=react-session
+    - JHIPSTER=react-infinispan
+    - JHIPSTER=react-couchbase
+  
 before_install:
   - jdk_switcher use oraclejdk8
   - java -version
