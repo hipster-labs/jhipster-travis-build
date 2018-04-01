@@ -89,7 +89,6 @@ env:
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
   #   - JHIPSTER=ms-ngx-gateway-eureka-oauth2
-  #   - JHIPSTER=ms-ngx-gateway-eureka-oauth2-nodb
   #   - JHIPSTER=ms-ngx-gateway-consul
   #   - JHIPSTER=ms-ngx-gateway-uaa PROTRACTOR=0
   #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
@@ -98,17 +97,17 @@ env:
   #
   # ----- React applications -----
   # matrix:
-  #   - JHIPSTER=react-mysql PROFILE=prod
-  #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=react-sass-noi18n
-  #   - JHIPSTER=react-websocket
-  #   - JHIPSTER=react-mariadb-kafka
-  #   - JHIPSTER=react-cassandra
-  #   - JHIPSTER=react-mongodb
-  #   - JHIPSTER=react-oauth2
-  #   - JHIPSTER=react-session
-  #   - JHIPSTER=react-infinispan
-  #   - JHIPSTER=react-couchbase
+  #   - JHIPSTER=react-mysql PROFILE=prod PROTRACTOR=0
+  #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod PROTRACTOR=0
+  #   - JHIPSTER=react-sass-noi18n PROTRACTOR=0
+  #   - JHIPSTER=react-websocket PROTRACTOR=0
+  #   - JHIPSTER=react-mariadb-kafka PROTRACTOR=0
+  #   - JHIPSTER=react-cassandra PROTRACTOR=0
+  #   - JHIPSTER=react-mongodb PROTRACTOR=0
+  #   - JHIPSTER=react-oauth2 PROTRACTOR=0
+  #   - JHIPSTER=react-session PROTRACTOR=0
+  #   - JHIPSTER=react-infinispan PROTRACTOR=0
+  #   - JHIPSTER=react-couchbase PROTRACTOR=0
   #
   # ----- Docker applications -----
   # matrix:
