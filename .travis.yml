@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "8.11.1"
+  - "10.1.0"
 jdk:
   - oraclejdk8
 addons:
@@ -39,22 +39,22 @@ env:
     - JHIPSTER_BRANCH=master
 
   # ----- default applications -----
-  # matrix:
-  #   - JHIPSTER=ngx-default PROFILE=prod PROTRACTOR=1
-  #   - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod PROTRACTOR=1
-  #   - JHIPSTER=ngx-gradle-fr PROFILE=prod PROTRACTOR=1
-  #   - JHIPSTER=ngx-mariadb-oauth2-sass-infinispan PROTRACTOR=1
-  #   - JHIPSTER=ngx-h2mem-ws-nol2
-  #   - JHIPSTER=ngx-mongodb-kafka-cucumber
-  #   - JHIPSTER=ngx-session-cassandra-fr
-  #   - JHIPSTER=ngx-couchbase
-  #   - JHIPSTER=ms-ngx-gateway-eureka
-  #   - JHIPSTER=ms-ngx-gateway-consul
-  #   - JHIPSTER=ms-ngx-gateway-uaa
-  #   - JHIPSTER=ms-micro-eureka
-  #   - JHIPSTER=ms-micro-consul
-  #   - JHIPSTER=react-default
-  #
+  matrix:
+    - JHIPSTER=ngx-default PROFILE=prod PROTRACTOR=1
+    - JHIPSTER=ngx-psql-es-noi18n PROFILE=prod PROTRACTOR=1
+    - JHIPSTER=ngx-gradle-fr PROFILE=prod PROTRACTOR=1
+    - JHIPSTER=ngx-mariadb-oauth2-sass-infinispan PROTRACTOR=1
+    - JHIPSTER=ngx-h2mem-ws-nol2
+    - JHIPSTER=ngx-mongodb-kafka-cucumber
+    - JHIPSTER=ngx-session-cassandra-fr
+    - JHIPSTER=ngx-couchbase
+    - JHIPSTER=ms-ngx-gateway-eureka
+    - JHIPSTER=ms-ngx-gateway-consul
+    - JHIPSTER=ms-ngx-gateway-uaa
+    - JHIPSTER=ms-micro-eureka
+    - JHIPSTER=ms-micro-consul
+    - JHIPSTER=react-default
+  
   # ----- ngx applications -----
   # matrix:
   #   - JHIPSTER=ngx-mysql PROFILE=prod
