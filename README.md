@@ -26,8 +26,8 @@ Additionnal builds for generator-jhipster repository
 [image-microservices]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=microservices
 [image-react]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=react
 
-[sonar-url]: https://sonarqube.com/dashboard?id=io.github.jhipster.sample%3Ajhipster-sample-application
-[sonar-quality-gate]: https://sonarqube.com/api/badges/gate?key=io.github.jhipster.sample%3Ajhipster-sample-application
-[sonar-coverage]: https://sonarqube.com/api/badges/measure?key=io.github.jhipster.sample%3Ajhipster-sample-application&metric=coverage
-[sonar-bugs]: https://sonarqube.com/api/badges/measure?key=io.github.jhipster.sample%3Ajhipster-sample-application&metric=bugs
-[sonar-vulnerabilities]: https://sonarqube.com/api/badges/measure?key=io.github.jhipster.sample%3Ajhipster-sample-application&metric=vulnerabilities
+[sonar-url]: https://sonarcloud.io/dashboard?id=io.github.jhipster.sample%3Ajhipster-sample-application
+[sonar-quality-gate]: https://sonarcloud.io/api/project_badges/measure?project=io.github.jhipster.sample%3Ajhipster-sample-application&metric=alert_status
+[sonar-coverage]: https://sonarcloud.io/api/project_badges/measure?project=io.github.jhipster.sample%3Ajhipster-sample-application&metric=coverage
+[sonar-bugs]: https://sonarcloud.io/api/project_badges/measure?project=io.github.jhipster.sample%3Ajhipster-sample-application&metric=bugs
+[sonar-vulnerabilities]: https://sonarcloud.io/api/project_badges/measure?project=io.github.jhipster.sample%3Ajhipster-sample-application&metric=vulnerabilities
