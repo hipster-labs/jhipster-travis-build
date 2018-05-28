@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "8.10.0"
+  - "8.11.2"
 jdk:
   - oraclejdk8
 addons:
@@ -89,7 +89,6 @@ env:
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
   #   - JHIPSTER=ms-ngx-gateway-eureka-oauth2
-  #   - JHIPSTER=ms-ngx-gateway-eureka-oauth2-nodb
   #   - JHIPSTER=ms-ngx-gateway-consul
   #   - JHIPSTER=ms-ngx-gateway-uaa PROTRACTOR=0
   #   - JHIPSTER=ms-micro-eureka PROTRACTOR=0
