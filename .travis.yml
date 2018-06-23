@@ -4,7 +4,7 @@ services:
   - docker
 language: node_js
 node_js:
-  - "10.1.0"
+  - "10.5.0"
 jdk:
   - oraclejdk8
 addons:
@@ -97,17 +97,17 @@ env:
   #
   # ----- React applications -----
   # matrix:
-  #   - JHIPSTER=react-mysql PROFILE=prod PROTRACTOR=0
-  #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod PROTRACTOR=0
-  #   - JHIPSTER=react-sass-noi18n PROTRACTOR=0
-  #   - JHIPSTER=react-websocket PROTRACTOR=0
-  #   - JHIPSTER=react-mariadb-kafka PROTRACTOR=0
-  #   - JHIPSTER=react-cassandra PROTRACTOR=0
-  #   - JHIPSTER=react-mongodb PROTRACTOR=0
-  #   - JHIPSTER=react-oauth2 PROTRACTOR=0
-  #   - JHIPSTER=react-session PROTRACTOR=0
-  #   - JHIPSTER=react-infinispan PROTRACTOR=0
-  #   - JHIPSTER=react-couchbase PROTRACTOR=0
+  #   - JHIPSTER=react-mysql PROFILE=prod
+  #   - JHIPSTER=react-psql-es-noi18n PROFILE=prod
+  #   - JHIPSTER=react-sass-noi18n
+  #   - JHIPSTER=react-websocket
+  #   - JHIPSTER=react-mariadb-kafka
+  #   - JHIPSTER=react-cassandra
+  #   - JHIPSTER=react-mongodb
+  #   - JHIPSTER=react-oauth2
+  #   - JHIPSTER=react-session
+  #   - JHIPSTER=react-infinispan
+  #   - JHIPSTER=react-couchbase
   #
   # ----- Docker applications -----
   # matrix:
