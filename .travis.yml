@@ -95,6 +95,16 @@ env:
   #   - JHIPSTER=ms-micro-eureka-oauth2 PROTRACTOR=0
   #   - JHIPSTER=ms-micro-consul PROTRACTOR=0
   #
+  # ----- microservices applications with Gradle -----
+  # matrix:
+  #   - JHIPSTER=gradle-ms-ngx-gateway-eureka
+  #   - JHIPSTER=gradle-ms-ngx-gateway-eureka-oauth2
+  #   - JHIPSTER=gradle-ms-ngx-gateway-consul
+  #   - JHIPSTER=gradle-ms-ngx-gateway-uaa PROTRACTOR=0
+  #   - JHIPSTER=gradle-ms-micro-eureka PROTRACTOR=0
+  #   - JHIPSTER=gradle-ms-micro-eureka-oauth2 PROTRACTOR=0
+  #   - JHIPSTER=gradle-ms-micro-consul PROTRACTOR=0
+  #
   # ----- React applications -----
   # matrix:
   #   - JHIPSTER=react-mysql PROFILE=prod
