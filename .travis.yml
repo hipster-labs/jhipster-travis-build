@@ -71,20 +71,20 @@ env:
   #   - JHIPSTER=ngx-couchbase
   #
   # ----- gradle applications -----
-  # matrix:
-  #   - JHIPSTER=gradle-ngx-mysql PROFILE=prod
-  #   - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
-  #   - JHIPSTER=gradle-ngx-sass-noi18n
-  #   - JHIPSTER=gradle-ngx-websocket PROTRACTOR=0
-  #   - JHIPSTER=gradle-ngx-hazelcast-cucumber
-  #   - JHIPSTER=gradle-ngx-mariadb-kafka-nol2
-  #   - JHIPSTER=gradle-ngx-cassandra
-  #   - JHIPSTER=gradle-ngx-mongodb
-  #   - JHIPSTER=gradle-ngx-oauth2
-  #   - JHIPSTER=gradle-ngx-session
-  #   - JHIPSTER=gradle-ngx-infinispan
-  #   - JHIPSTER=gradle-ngx-couchbase
-  #
+  matrix:
+    - JHIPSTER=gradle-ngx-mysql PROFILE=prod
+    - JHIPSTER=gradle-ngx-psql-es-noi18n PROFILE=prod
+    - JHIPSTER=gradle-ngx-sass-noi18n
+    - JHIPSTER=gradle-ngx-websocket PROTRACTOR=0
+    - JHIPSTER=gradle-ngx-hazelcast-cucumber
+    - JHIPSTER=gradle-ngx-mariadb-kafka-nol2
+    - JHIPSTER=gradle-ngx-cassandra
+    - JHIPSTER=gradle-ngx-mongodb
+    - JHIPSTER=gradle-ngx-oauth2
+    - JHIPSTER=gradle-ngx-session
+    - JHIPSTER=gradle-ngx-infinispan
+    - JHIPSTER=gradle-ngx-couchbase
+  
   # ----- microservices applications -----
   # matrix:
   #   - JHIPSTER=ms-ngx-gateway-eureka
