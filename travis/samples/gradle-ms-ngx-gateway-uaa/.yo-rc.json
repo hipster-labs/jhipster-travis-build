@@ -4,19 +4,20 @@
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
     "serverPort": "8080",
-    "authenticationType": "jwt",
-    "cacheProvider": "ehcache",
-    "enableHibernateCache": false,
+    "authenticationType": "uaa",
+    "uaaBaseName": "travisUaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "mariadb",
-    "prodDatabaseType": "mariadb",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "messageBroker": "kafka",
-    "buildTool": "maven",
-    "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
     "useSass": false,
-    "applicationType": "monolith",
+    "applicationType": "gateway",
     "testFrameworks": [
       "gatling",
       "protractor"
@@ -25,11 +26,9 @@
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
-      "en",
-      "fr"
+      "en"
     ],
     "travis": true,
-    "serviceDiscoveryType": false,
     "clientPackageManager": "npm",
     "clientFramework": "angularX"
   }
