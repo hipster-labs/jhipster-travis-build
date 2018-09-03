@@ -6,6 +6,7 @@ set -e
 #-------------------------------------------------------------------------------
 docker container run -d --name jhipster jhipster/jhipster:master
 docker container ps
+docker container exec -it jhipster npm --version
 docker container exec -it jhipster yarn --version
 docker container exec -it jhipster yo --version
 docker container exec -it jhipster jhipster --help --no-insight
@@ -14,4 +15,4 @@ docker container exec -it jhipster curl https://raw.githubusercontent.com/jhipst
 docker container exec -it jhipster ls -al
 docker container exec -it jhipster jhipster --force --no-insight --skip-checks --with-entities
 docker container exec -it jhipster ./mvnw test
-docker container exec -it jhipster yarn test
+docker container exec -it jhipster npm test

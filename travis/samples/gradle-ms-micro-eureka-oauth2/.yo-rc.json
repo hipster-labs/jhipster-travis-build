@@ -1,20 +1,19 @@
 {
   "generator-jhipster": {
-    "applicationType": "gateway",
-    "baseName": "travisDefault",
+    "applicationType": "microservice",
+    "baseName": "travisMicroserviceEureka",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
     "authenticationType": "oauth2",
-    "cacheProvider": "hazelcast",
+    "cacheProvider": "ehcache",
     "enableHibernateCache": true,
-    "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
     "serviceDiscoveryType": "eureka",
-    "useSass": false,
-    "buildTool": "maven",
+    "buildTool": "gradle",
+    "jwtSecretKey": "bXktc2VjcmV0LWtleS13aGljaC1zaG91bGQtYmUtY2hhbmdlZC1pbi1wcm9kdWN0aW9uLWFuZC1iZS1iYXNlNjQtZW5jb2RlZAo=",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
@@ -25,12 +24,14 @@
       "gatling",
       "protractor"
     ],
-    "serverPort": "8080",
+    "skipClient": true,
+    "skipUserManagement": true,
+    "serverPort": "8081",
     "jhiPrefix": "jhi",
     "travis": true,
+    "websocket": false,
     "messageBroker": false,
-    "jwtSecretKey": "6acb91d39cc4584bd713bfa5e037d694efb6a1a2",
-    "clientPackageManager": "npm",
-    "clientFramework": "angularX"
+    "clientFramework": "angular1",
+    "clientPackageManager": "npm"
   }
 }
