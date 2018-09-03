@@ -10,6 +10,7 @@ Additionnal builds for generator-jhipster repository
 | ngx-maven     | [![Build Status][image-ngx-maven]][travis-url]           | Builds for ngx Maven           |
 | ngx-gradle    | [![Build Status][image-ngx-gradle]][travis-url]          | Builds for ngx Gradle          |
 | microservices | [![Build Status][image-microservices]][travis-url]       | Builds for Microservices       |
+| ms-gradle     | [![Build Status][image-ms-gradle]][travis-url]           | Builds for MS+Gradle           |
 | react         | [![Build Status][image-react]][travis-url]               | Builds for React               |
 | node latest   | [![Build Status][image-node-latest]][travis-url]         | Builds for Node Latest         |
 
@@ -25,6 +26,7 @@ Additionnal builds for generator-jhipster repository
 [image-ngx-maven]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=ngx-maven
 [image-ngx-gradle]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=ngx-gradle
 [image-microservices]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=microservices
+[image-ms-gradle]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=microservices-gradle
 [image-react]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=react
 [image-node-latest]: https://travis-ci.org/hipster-labs/jhipster-travis-build.svg?branch=node-latest
 
