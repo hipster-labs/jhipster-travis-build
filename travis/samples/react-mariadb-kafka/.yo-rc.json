@@ -14,7 +14,6 @@
     "searchEngine": false,
     "messageBroker": "kafka",
     "buildTool": "maven",
-    "enableSocialSignIn": false,
     "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
     "useSass": false,
     "applicationType": "monolith",
@@ -31,7 +30,7 @@
     ],
     "travis": true,
     "serviceDiscoveryType": false,
-    "clientPackageManager": "yarn",
+    "clientPackageManager": "npm",
     "clientFramework": "react"
   }
 }

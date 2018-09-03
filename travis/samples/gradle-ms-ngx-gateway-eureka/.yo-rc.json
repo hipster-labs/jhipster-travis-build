@@ -5,23 +5,22 @@
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
     "authenticationType": "jwt",
-    "cacheProvider": "ehcache",
+    "cacheProvider": "hazelcast",
     "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "serviceDiscoveryType": "consul",
+    "serviceDiscoveryType": "eureka",
     "useSass": false,
-    "buildTool": "maven",
+    "buildTool": "gradle",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
       "en",
       "fr"
     ],
-    "enableSocialSignIn": false,
     "testFrameworks": [
       "gatling",
       "protractor"
@@ -30,8 +29,8 @@
     "jhiPrefix": "jhi",
     "travis": true,
     "messageBroker": false,
-    "jwtSecretKey": "6eca1d24b145ed1fafc738d2afa023a3362b6813",
-    "clientPackageManager": "yarn",
-    "clientFramework": "angular1"
+    "jwtSecretKey": "6acb91d39cc4584bd713bfa5e037d694efb6a1a2",
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX"
   }
 }

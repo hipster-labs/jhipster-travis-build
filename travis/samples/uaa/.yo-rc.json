@@ -14,7 +14,6 @@
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
-    "enableSocialSignIn": false,
     "enableTranslation": true,
     "applicationType": "uaa",
     "testFrameworks": [
@@ -28,6 +27,6 @@
     ],
     "travis": true,
     "clientFramework": "angularX",
-    "clientPackageManager": "yarn"
+    "clientPackageManager": "npm"
   }
 }

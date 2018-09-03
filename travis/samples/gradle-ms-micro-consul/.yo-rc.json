@@ -1,37 +1,37 @@
 {
   "generator-jhipster": {
-    "applicationType": "monolith",
-    "baseName": "travisMysql",
+    "applicationType": "microservice",
+    "baseName": "travisMicroserviceConsul",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
     "authenticationType": "jwt",
     "cacheProvider": "ehcache",
     "enableHibernateCache": true,
-    "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "mysql",
+    "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "useSass": false,
-    "buildTool": "maven",
+    "serviceDiscoveryType": "consul",
+    "buildTool": "gradle",
+    "jwtSecretKey": "bXktc2VjcmV0LWtleS13aGljaC1zaG91bGQtYmUtY2hhbmdlZC1pbi1wcm9kdWN0aW9uLWFuZC1iZS1iYXNlNjQtZW5jb2RlZAo=",
     "enableTranslation": true,
     "nativeLanguage": "en",
     "languages": [
       "en",
       "fr"
     ],
-    "enableSocialSignIn": false,
-    "rememberMeKey": "f19f0827c622eb9b81f5227a869ccd44932d78eb",
     "testFrameworks": [
       "gatling",
       "protractor"
     ],
-    "serverPort": "8080",
+    "skipClient": true,
+    "skipUserManagement": true,
+    "serverPort": "8081",
     "jhiPrefix": "jhi",
     "travis": true,
+    "websocket": false,
     "messageBroker": false,
-    "serviceDiscoveryType": false,
-    "clientPackageManager": "yarn",
-    "clientFramework": "angular1"
+    "clientFramework": "angular1",
+    "clientPackageManager": "npm"
   }
 }

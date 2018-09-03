@@ -4,13 +4,13 @@
     "baseName": "travisDefault",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "jwt",
+    "authenticationType": "oauth2",
     "cacheProvider": "hazelcast",
     "enableHibernateCache": true,
     "websocket": false,
-    "databaseType": "sql",
-    "devDatabaseType": "h2Disk",
-    "prodDatabaseType": "mysql",
+    "databaseType": "no",
+    "devDatabaseType": "no",
+    "prodDatabaseType": "no",
     "searchEngine": false,
     "serviceDiscoveryType": "eureka",
     "useSass": false,
@@ -21,7 +21,6 @@
       "en",
       "fr"
     ],
-    "enableSocialSignIn": false,
     "testFrameworks": [
       "gatling",
       "protractor"
@@ -31,7 +30,7 @@
     "travis": true,
     "messageBroker": false,
     "jwtSecretKey": "6acb91d39cc4584bd713bfa5e037d694efb6a1a2",
-    "clientPackageManager": "yarn",
-    "clientFramework": "angular1"
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX"
   }
 }

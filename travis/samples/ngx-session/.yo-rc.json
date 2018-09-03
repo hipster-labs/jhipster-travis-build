@@ -14,7 +14,6 @@
     "searchEngine": false,
     "messageBroker": false,
     "buildTool": "maven",
-    "enableSocialSignIn": false,
     "useSass": false,
     "applicationType": "monolith",
     "testFrameworks": [
@@ -30,7 +29,7 @@
     "travis": true,
     "serviceDiscoveryType": false,
     "jwtSecretKey": "82c6dce0d969c5bc3ab2530ecc5c18baaef1c987",
-    "clientPackageManager": "yarn",
+    "clientPackageManager": "npm",
     "clientFramework": "angularX"
   }
 }
