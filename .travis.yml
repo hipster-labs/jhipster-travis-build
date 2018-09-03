@@ -143,7 +143,7 @@ install:
   - $TRAVIS_BUILD_DIR/travis/scripts/00-install-jhipster.sh
   - if [[ "$JHIPSTER" == "" ]]; then
       cd "$HOME"/generator-jhipster;
-      yarn test;
+      npm test;
     fi
   # copy samples
   - cp -R "$TRAVIS_BUILD_DIR"/travis/samples/* "$JHIPSTER_SAMPLES"/
