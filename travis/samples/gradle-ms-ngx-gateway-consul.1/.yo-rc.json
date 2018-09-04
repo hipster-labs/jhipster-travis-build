@@ -29,7 +29,7 @@
     "jhiPrefix": "jhi",
     "travis": true,
     "messageBroker": false,
-    "jwtSecretKey": "6eca1d24b145ed1fafc738d2afa023a3362b6813",
+    "jwtSecretKey": "bXktc2VjcmV0LWtleS13aGljaC1zaG91bGQtYmUtY2hhbmdlZC1pbi1wcm9kdWN0aW9uLWFuZC1iZS1iYXNlNjQtZW5jb2RlZAo=",
     "clientPackageManager": "npm",
     "clientFramework": "angularX"
   }
