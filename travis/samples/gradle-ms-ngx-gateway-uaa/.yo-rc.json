@@ -1,10 +1,11 @@
 {
   "generator-jhipster": {
-    "applicationType": "gateway",
     "baseName": "travisDefault",
     "packageName": "io.github.jhipster.travis",
     "packageFolder": "io/github/jhipster/travis",
-    "authenticationType": "jwt",
+    "serverPort": "8080",
+    "authenticationType": "uaa",
+    "uaaBaseName": "travisUaa",
     "cacheProvider": "hazelcast",
     "enableHibernateCache": true,
     "websocket": false,
@@ -12,24 +13,22 @@
     "devDatabaseType": "h2Disk",
     "prodDatabaseType": "mysql",
     "searchEngine": false,
-    "serviceDiscoveryType": "consul",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
     "useSass": false,
-    "buildTool": "maven",
-    "enableTranslation": true,
-    "nativeLanguage": "en",
-    "languages": [
-      "en",
-      "fr"
-    ],
+    "applicationType": "gateway",
     "testFrameworks": [
       "gatling",
       "protractor"
     ],
-    "serverPort": "8080",
     "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
     "travis": true,
-    "messageBroker": false,
-    "jwtSecretKey": "bXktc2VjcmV0LWtleS13aGljaC1zaG91bGQtYmUtY2hhbmdlZC1pbi1wcm9kdWN0aW9uLWFuZC1iZS1iYXNlNjQtZW5jb2RlZAo=",
     "clientPackageManager": "npm",
     "clientFramework": "angularX"
   }
