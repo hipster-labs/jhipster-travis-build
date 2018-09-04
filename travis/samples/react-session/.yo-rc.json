@@ -28,7 +28,7 @@
     ],
     "travis": true,
     "serviceDiscoveryType": false,
-    "jwtSecretKey": "82c6dce0d969c5bc3ab2530ecc5c18baaef1c987",
+    "rememberMeKey": "6c18944b8caccc396e79d82825d1eecd4a47c037e7241d176dbf25778658f263f15bdb60a925e818e698145237296029ecd4",
     "clientPackageManager": "npm",
     "clientFramework": "react"
   }
