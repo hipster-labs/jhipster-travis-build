@@ -2,7 +2,7 @@
 
 ## Travis Builds
 
-Additionnal builds for generator-jhipster repository
+Additional builds for generator-jhipster repository
 
 | Type          | Status                                                   | Description                    |
 |:--------------|:---------------------------------------------------------|:-------------------------------|
